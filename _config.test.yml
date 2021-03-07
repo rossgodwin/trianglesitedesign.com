@@ -1,0 +1,9 @@
+destination: ../test.trianglesitedesign.com/docs
+
+# host: 0.0.0.0 # GitHub will simply ignore this when you push
+
+url: "https://rossgodwin.github.io"
+baseurl: "/test.trianglesitedesign.com"
+
+# Analytics
+google_analytics_measurement_id: ""
