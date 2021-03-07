@@ -1,0 +1,15 @@
+<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$(".tsd-page-header-menu-toggler").click(function(e) {
+			$(".tsd-page-header-navigation").toggleClass("active");
+		});
+
+		$(".tsd-services-service").click(function(e) {
+			$(this).toggleClass("tsd-services-service-open");
+			$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
+			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
+		});
+	});
+</script>

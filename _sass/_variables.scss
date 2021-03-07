@@ -1,0 +1,31 @@
+$color-black: #000;
+$color-white: #fff;
+
+$tsd-color-red: #e02b20;
+$tsd-color-gray: #666;
+$tsd-color-light-gray: #fafafa;
+$tsd-color-dark-gray: #333;
+
+$tsd-font-helveticaPoppins: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+$tsd-font-georgiaPlayfair: 'Playfair Display',Georgia,"Times New Roman",serif;
+$tsd-font-helveticaSaira: 'Saira Extra Condensed',Helvetica,Arial,Lucida,sans-serif;
+
+$tsd-page-content-large-header-height: 289px;
+
+$tsd-small-device-page-header-top-bottom-padding: 5px;
+$tsd-small-device-page-footer-top-bottom-padding: 1rem;
+$tsd-small-device-page-left-right-padding: 1rem;
+$tsd-small-device-page-header-logo-image-width: 162px;
+$tsd-small-device-page-header-logo-image-height: 72px;
+$tsd-small-device-header-height: $tsd-small-device-page-header-logo-image-height + (2 * $tsd-small-device-page-header-top-bottom-padding);
+
+$tsd-medium-device-page-header-top-bottom-padding: 2 * $tsd-small-device-page-header-top-bottom-padding;
+$tsd-medium-device-page-header-logo-image-width: 162px;
+$tsd-medium-device-page-header-logo-image-height: 72px;
+$tsd-medium-device-page-header-navigation-height: 28px;
+$tsd-medium-device-page-header-wrapper-height: $tsd-medium-device-page-header-logo-image-height + $tsd-medium-device-page-header-navigation-height;
+$tsd-medium-device-header-height: $tsd-medium-device-page-header-wrapper-height + (2 * $tsd-medium-device-page-header-top-bottom-padding);
+
+$tsd-large-device-page-header-logo-image-width: 288px;
+$tsd-large-device-page-header-logo-image-height: 128px;
+$tsd-large-device-header-height: $tsd-large-device-page-header-logo-image-height + (2 * $tsd-small-device-page-header-top-bottom-padding);

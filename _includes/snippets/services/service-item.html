@@ -1,0 +1,18 @@
+{% assign _toggle_open = include.toggle_open | default: false %}
+{% assign _show_toggle = include.benefit != "" or include.description != "" | default: false %}
+<div>
+	<div class="tsd-services-service{% if  _toggle_open == true %} tsd-services-service-open{% endif %}">
+		<h4 class="tsd-services-service-title tsd-services-service-toggle-icon{% if _toggle_open == true %} tsd-services-service-toggle-icon-open{% endif %}">
+			{{ include.title }}
+		</h4>
+		<div class="tsd-services-service-description{% if _toggle_open == true %} tsd-services-service-description-open{% endif %}">
+			{% if include.benefit %}
+				<h5>{{ include.benefit }}</h5>
+			{% endif %}
+			<p>
+				{{ include.description }}
+				{{ _show_toggle }}
+			</p>
+		</div>
+	</div>
+</div>

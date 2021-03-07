@@ -1,0 +1,40 @@
+---
+layout: default
+title: &title "Markets"
+---
+
+<div class="tsd-markets">
+	{% include snippets/markets/markets-header.html %}
+	
+	<section class="tsd-markets-content">
+		<section class="tsd-markets-content-section">
+			<div class="tsd-markets-content-grid">
+				<div class="tsd-marketing-sign">
+					<h2>The markets currently served by {{ site.tsd.name }}</h2>
+				</div>
+				
+				<div class="tsd-markets-markets-list">
+					<i class="fas fa-check fa-2x"></i>
+					<span>Financial</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Healthcare</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Industrial</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Institutional</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Mixed Use and Roadway</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Office</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Residential and Multi-Family</span>
+					<i class="fas fa-check fa-2x"></i>
+					<span>Retail</span>
+				</div>
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_danesambrick] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+	</section>
+</div>

@@ -1,0 +1,12 @@
+{% include helpers/prepend-baseurl.html path=include.photo-url %}
+<div>
+	<div class="tsd-leadership-preview">
+		<img class="tsd-leadership-bio-photo tsd-image-responsive" src="{{ __return }}" alt="{{ include.name }}">
+		<h4>{{ include.name }}{% if include.name_title %}, {{ include.name_title }}{% endif %}</h4>
+		<h5>{{ include.title }}</h5>
+		<hr>
+		<p>
+			<a class="tsd-btn-primary" href="{{ include.personal-page-url }}" role="button">Read Bio</a>
+		</p>
+	</div>
+</div>

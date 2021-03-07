@@ -1,0 +1,120 @@
+---
+layout: default
+title: &title "Home"
+---
+
+<div class="tsd-home">
+	{% include snippets/home/home-header.html %}
+	
+	<section class="tsd-home-content">
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-text-photo">
+				<div class="tsd-home-marketing-text">
+					{% capture _description %}
+						Located in Raleigh, North Carolina, we partner with developers and retailers to deliver superior customer service with high-quality results. We reduce your project cost and time through Value Engineering; we identify and minimize unnecessary cost while improving the value of your desired results.
+					{% endcapture %}
+					{% include snippets/marketing-sign.html
+						slogan="Don't Settle for Less"
+						quality="Superior Customer Service"
+						positive="Total Client Satisfaction"
+						description=_description %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-right">
+					<img src="{% link assets/images/dollar-genneral-800x680.jpg %}" alt="Amazon AWS EC2 RDS Cloud"/>
+					<div class="tsd-home-marketing-photo-caption">
+						<h4>Dollar General | Manteo, NC</h4>
+						<p>
+							TSD has designed over 170 Dollar General stores as of January 2019, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. TSD knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_georgebarnes] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-photo-text">
+				<div class="tsd-home-marketing-text">
+					{% capture _description %}
+						At {{ site.tsd.name }}, building relationships is just as important as building sites. You will never be just another job. Services start with gaining an extensive understanding of your situation and needs. We commit to connecting with you personally on every project to create a relationship that leads to a superior product and unsurpassed results.
+					{% endcapture %}
+					{% include snippets/marketing-sign.html
+						slogan="Done The Right Way"
+						quality="Strong Partnership"
+						positive="Customer Involvement And Communication"
+						description=_description %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-left">
+					<img src="{% link assets/images/projects/wakefield_commons_apartments.jpg %}" alt="Amazon AWS EC2 RDS Cloud"/>
+					<div class="tsd-home-marketing-photo-caption">
+						<h4>Wakefield Commons | Raleigh, NC</h4>
+						<p>
+							This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC).  Given the project is located in a watershed, many stormwater and grading challenges surfaced that TSD had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_adamsellner] %}
+		{% include snippets/quote-angled-edges.html reverse=true name=person.name title=person.title company=person.company quote=person.quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-text-photo">
+				<div class="tsd-home-marketing-text">
+					{% capture _description %}
+						{{ site.tsd.name }} is unique in that we have the capabilities of a large firm and the agility of a small firm. With 75+ years of combined service, we have managed a variety of projects across North Carolina, South Carolina, and Virginia.
+					{% endcapture %}
+					{% include snippets/marketing-sign.html
+						slogan="Just What You Need"
+						quality="High-Quality Product"
+						positive="Wide Range of Civil Engineering Design Services on Time and Within Budget"
+						description=_description %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-right">
+					<img src="{% link assets/images/panera-800x1035.jpg %}" alt="Amazon AWS EC2 RDS Cloud"/>
+					<div class="tsd-home-marketing-photo-caption">
+						<h4>Panera Bread | Durham, NC</h4>
+						<p>
+							Partnering with a developer for Panera Bread Company, TSD has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_leehumphrey] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-benefits-grid">
+				{% include snippets/marketing-sign.html
+					slogan="Why Choose Triangle Site Design"
+					quality="The Benefits of Partnering with Us"
+					positive="Customer Involvement And Communication"
+					description="" %}
+					
+				<div>
+					{% include snippets/plus-sign-bullet-point.html text="Value Engineering" %}
+					{% include snippets/plus-sign-bullet-point.html text="Premium value placed on your schedule" %}
+					{% include snippets/plus-sign-bullet-point.html text="Emphasis on efficient, cost-effective design" %}
+					{% include snippets/plus-sign-bullet-point.html text="Superior and personalized customer service" %}
+					{% include snippets/plus-sign-bullet-point.html text="Timely, cost-efficient and excellent work" %}
+					{% include snippets/plus-sign-bullet-point.html text="Valuable management, technical, and regulatory knowledge and experience" %}
+					{% include snippets/plus-sign-bullet-point.html text="Expertise and professional service with emphasis on high quality" %}
+					{% include snippets/plus-sign-bullet-point.html text="Attention to detail" %}
+					{% include snippets/plus-sign-bullet-point.html text="Responsiveness to client inquiries" %}
+					{% include snippets/plus-sign-bullet-point.html text="Honesty and integrity" %}
+				</div>
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_paulwilliams] %}
+		{% include snippets/quote-angled-edges.html reverse=true name=person.name title=person.title company=person.company quote=person.quote %}
+	</section>
+</div>

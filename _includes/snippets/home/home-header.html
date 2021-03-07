@@ -1,0 +1,15 @@
+{% capture _title %}
+	{{ site.tsd.name }}
+{% endcapture %}
+{% capture _slogan %}
+	{{ site.description }}
+{% endcapture %}
+{% capture _description %}
+	A seasoned civil consulting and engineering firm that specializes in
+	land planning and land development design.
+{% endcapture %}
+{% include page-content-header.html
+	style_class="tsd-home-header"
+	title=_title
+	slogan=_slogan
+	description=_description %}

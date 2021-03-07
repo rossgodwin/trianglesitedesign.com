@@ -1,0 +1,32 @@
+---
+layout: default
+title: &title "Leadership"
+---
+
+<div class="tsd-leadership">
+	{% include snippets/leadership/leadership-header.html %}
+	
+	<section class="tsd-leadership-content">
+		<section class="tsd-leadership-content-section">
+			<div class="tsd-leadership-grid">
+				{% assign person = site.data.leadership.matt %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+				
+				{% assign person = site.data.leadership.brent %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+				
+				{% assign person = site.data.leadership.carlo %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+				
+				{% assign person = site.data.leadership.ross %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+					
+				{% assign person = site.data.leadership.toni %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+				
+				{% assign person = site.data.leadership.rinnette %}
+				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
+			</div>
+		</section>
+	</section>
+</div>

@@ -1,0 +1,59 @@
+<footer id="contact" class="tsd-page-footer">
+	<div class="tsd-page-footer-wrapper">
+		<div class="tsd-page-footer-content">
+			{% include snippets/request-proposal.html %}
+			
+			<div class="tsd-page-footer-contact">
+				<div class="tsd-page-footer-contact-info">
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-map-marker-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						{{ site.tsd.address.line1 }}
+						<br>
+						{{ site.tsd.address.citystate }}, {{ site.tsd.address.zip }}
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-mobile-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						{{ site.tsd.phone_number }}
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-clock fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						{{ site.tsd.open.days }}
+						<br>
+						{{ site.tsd.open.hours }}
+					</div>
+				</div>
+				
+				<div class="tsd-page-footer-contact-connect">
+					<div>Connect With Us</div>
+					<a href="{{ site.tsd.linkedin.url }}" target="_blank">
+						<span class="fa-stack fa-2x" style="margin-right: 10px;">
+							<i class="fas fa-square fa-stack-2x" aria-hidden="true"></i>
+							<i class="fab fa-linkedin-in fa-stack-1x fa-inverse" aria-hidden="true"></i>
+						</span>
+					</a>
+					<a href="{{ site.tsd.facebook.url }}" target="_blank">
+						<span class="fa-stack fa-2x">
+							<i class="fas fa-square fa-stack-2x" aria-hidden="true"></i>
+							<i class="fab fa-facebook-f fa-stack-1x fa-inverse" aria-hidden="true"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="tsd-page-footer-legal">
+				&copy;Copyright 2021 - {{ site.tsd.legal_name }} - All Rights Reserved
+			</div>
+		</div>
+	</div>
+</footer>

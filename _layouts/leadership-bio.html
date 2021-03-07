@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="tsd-leadership">
+	<section class="tsd-leadership-bio-content">
+		<section class="tsd-leadership-content-section">
+			<a href="{% link leadership.html %}">
+				<div class="tsd-bullet-point">
+					<i class="fas fa-angle-left fa-2x"></i>
+					<span>
+						Back to Leadership
+					</span>
+				</div>
+			</a>
+			
+			{{ content }}
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_leehumphrey] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+	</section>
+</div>

@@ -1,0 +1,97 @@
+# Site wide configuration
+destination: docs
+
+url: ""
+baseurl: ""
+
+title: Triangle Site Design
+description: Civil Consulting and Engineering Firm
+location: Raleigh, NC
+
+# Analytics
+google_analytics_measurement_id:
+
+tsd:
+  name: Triangle Site Design
+  legal_name: Triangle Site Design, PLLC
+  address:
+    line1: 4004 Barrett Drive, Suite 101
+    citystate: Raleigh, NC
+    zip: 27609
+  phone_number: 919-553-6570
+  open:
+    days: Monday - Friday
+    hours: 8am - 5pm
+  linkedin:
+    url: https://www.linkedin.com/company/trianglesitedesign
+  facebook:
+    display-url: https://www.facebook.com/trianglesitedesign
+    url: https://www.facebook.com/trianglesitedesign
+
+# Jekyll configuration
+version: v1.2.0
+permalink: /:categories/:title/
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+include:
+  - _pages
+exclude:
+  - .bundle
+  - .jekyll-cache
+  - .gitignore
+  - .project
+  - _drafts
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Photoshop/
+  - vendor/bundle/
+
+excerpt_separator: <!--more-->
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-gist
+  - jekyll-liquify
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/:num/'
+  title: ':title | :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail: 
+    before: 2
+    after: 2
+
+# Plugin: Auto Pages (jekyll-paginate-v2)
+autopages:
+  enabled: true
+  tags:
+    enabled: true
+    layouts:
+      - autopage_tags.html
+    permalink: /tag/:tag
+  categories:
+    enabled: false
+    layouts:
+      - autopage_category.html
+  collections:
+    enabled: false
+    slugify:
+      mode: 'ascii'
+      cased: true

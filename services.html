@@ -1,0 +1,46 @@
+---
+layout: default
+title: &title "Services"
+---
+
+<div class="tsd-services">
+	<header class="tsd-services-header">
+		<section>
+			<div>
+				<h3>Services</h3>
+				<h4>Almost 100% of Our Business...</h4>
+				<p>
+					Comes from repeat clients and referrals.
+				</p>
+			</div>
+		</section>
+	</header>
+	<section class="tsd-services-content">
+		<section class="tsd-services-content-section">
+			<div class="tsd-services-grid">
+				{% for service in site.data.services.services limit:3 %}
+					{% include snippets/services/service-item.html
+						toggle_open=service.toggle_open
+						title=service.title
+						benefit=service.benefit
+						description=service.description %}
+				{% endfor %}
+			</div>
+		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_stevenpeedin] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		
+		<section class="tsd-services-content-section">
+			<div class="tsd-services-grid">
+				{% for service in site.data.services.services offset:3 %}
+					{% include snippets/services/service-item.html
+						toggle_open=service.toggle_open
+						title=service.title
+						benefit=service.benefit
+						description=service.description %}
+				{% endfor %}
+			</div>
+		</section>
+	</section>
+</div>
