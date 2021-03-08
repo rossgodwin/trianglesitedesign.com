@@ -10,9 +10,11 @@
 						<i class="fa fa-map-marker-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
 					<div>
-						{{ site.tsd.address.line1 }}
-						<br>
-						{{ site.tsd.address.citystate }}, {{ site.tsd.address.zip }}
+						<a href="{{ site.tsd.address-url }}" target="_blank">
+							{{ site.tsd.address.line1 }}
+							<br>
+							{{ site.tsd.address.citystate }}, {{ site.tsd.address.zip }}
+						</a>
 					</div>
 					
 					<span class="fa-stack fa-2x">
@@ -20,7 +22,9 @@
 						<i class="fa fa-mobile-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
 					<div>
-						{{ site.tsd.phone_number }}
+						<a href="tel:{{ site.tsd.phone_number }}">
+							{{ site.tsd.phone_number }}
+						</a>
 					</div>
 					
 					<span class="fa-stack fa-2x">

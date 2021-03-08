@@ -31,9 +31,7 @@ h5 {
 }
 
 p {
-	//font-family: $tsd-font-georgiaPlayfair;
 	line-height: 1.4em;
-	//font-family: $tsd-font-helveticaPoppins;
 	padding: 0;
 	margin: 0;
 	color: $tsd-color-gray;
@@ -233,7 +231,6 @@ a {
 	
 	&:before {
 		position: absolute;
-		z-index: 10;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -468,6 +465,12 @@ a {
 	div {
 		@extend .tsd-horizontal-align-left;
 		line-height: 1.5rem;
+	}
+	
+	a {
+		color: $tsd-color-gray;
+		padding-bottom: 1px;
+		border-bottom: 1px dashed;
 	}
 }
 
