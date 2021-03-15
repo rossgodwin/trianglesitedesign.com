@@ -39,5 +39,18 @@ services:
   - title: ADA Compliance
     description: We design sites to be compliant with current ADA regulations, for example, ADA paths from right-of-way and/or parking to the front of the building.
     toggle_open: no
+  - title: Computer Program Proficiency
+    description: AutoCAD, Autoturn, Microsoft Project, StormCAD, Flowmaster, Hydroflow and HEC-RAS
+    toggle_open: no
   - title: Site Planning & Layout
   - title: Sediment & Erosion Control Design
+  - title: Grading & Drainage Design
+  - title: Stormwater Management Design
+  - title: Utility Services & Infrastructure
+  - title: Utility Studies
+  - title: Watershed Analysis & Modeling
+  - title: Entitlements / Permitting
+  - title: Drainage System Design
+  - title: FEMA & NPDES Permitting
+  - title: Construction Administration
+  - title: Environmental Analysis & Permitting

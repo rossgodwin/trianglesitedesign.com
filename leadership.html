@@ -8,7 +8,22 @@ title: &title "Leadership"
 	
 	<section class="tsd-leadership-content">
 		<section class="tsd-leadership-content-section">
-			<div class="tsd-leadership-grid">
+			<div class="tsd-leadership-marketing-grid">
+				{% capture _description %}
+					With our 75+ years of combined service, the team at {{ site.tsd.name }} has managed a variety
+					of projects across North Carolina, South Carolina, and Virginia.
+				{% endcapture %}
+				
+				{% include snippets/marketing-sign.html
+					slogan="Proven Success"
+					quality="The Numbers Don't Lie"
+					description=_description %}
+				{% include snippets/leadership/leadership-experience-metric.html %}
+			</div>
+		</section>
+		
+		<section class="tsd-leadership-content-section">
+			<div class="tsd-leadership-team-grid">
 				{% assign person = site.data.leadership.matt %}
 				{% include snippets/leadership/leadership-preview.html photo-url=person.photo-url name=person.name name_title=person.name_title title=person.title personal-page-url=person.personal-page-url %}
 				

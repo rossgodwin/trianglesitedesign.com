@@ -2,7 +2,7 @@
 matt:
   name: Matt Lowder
   name_title: P.E.
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: matt-lowder
   title: Owner
   accomplishments:
@@ -14,7 +14,7 @@ matt:
 
 brent:
   name: Brent Purdum
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: brent-purdum
   title: Project Manager
   accomplishments:
@@ -29,7 +29,7 @@ brent:
 carlo:
   name: Carlo Pardo
   name_title: P.E.
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: carlo-pardo
   title: Project Manager
   accomplishments:
@@ -43,7 +43,7 @@ carlo:
 
 toni:
   name: Toni Ragan
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: toni-ragan
   title: Site Plan Designer
   accomplishments:
@@ -55,7 +55,7 @@ toni:
 
 ross:
   name: Ross Godwin
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: ross-godwin
   title: Project Manager
   accomplishments:
@@ -67,7 +67,7 @@ ross:
 
 rinnette:
   name: Rinnette Lowder
-  photo-url: assets/images/Matt-headshot-2.jpeg
+  photo-url: assets/images/people/matt.jpeg
   personal-page-url: rinnette-lowder
   title: Office Administrator
   accomplishments:

@@ -1,9 +1,12 @@
+{% assign person = site.data.references.people[site.data.references.reference_index_leehumphrey] %}
+{% capture _slogan %}
+	{{ person.name }} - {{ person.title }} | {{ person.company }}
+{% endcapture %}
 {% capture _description %}
-	With our 75+ years of combined service, the team at {{ site.tsd.name }} has managed a variety
-	of projects across North Carolina, South Carolina, and Virginia.
+	"{{ person.quote }}"
 {% endcapture %}
 {% include page-content-header.html
 	style_class="tsd-leadership-header"
 	title="Leadership"
-	slogan="The Numbers Don't Lie"
+	slogan=_slogan
 	description=_description %}

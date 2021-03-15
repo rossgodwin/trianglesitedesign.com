@@ -4,17 +4,8 @@ title: &title "Services"
 ---
 
 <div class="tsd-services">
-	<header class="tsd-services-header">
-		<section>
-			<div>
-				<h3>Services</h3>
-				<h4>Almost 100% of Our Business...</h4>
-				<p>
-					Comes from repeat clients and referrals.
-				</p>
-			</div>
-		</section>
-	</header>
+	{% include snippets/services/services-header.html %}
+	
 	<section class="tsd-services-content">
 		<section class="tsd-services-content-section">
 			<div class="tsd-services-grid">
@@ -32,6 +23,7 @@ title: &title "Services"
 		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
 		
 		<section class="tsd-services-content-section">
+			<!--<a class="tsd-services-expand-all">Expand All</a>-->
 			<div class="tsd-services-grid">
 				{% for service in site.data.services.services offset:3 %}
 					{% include snippets/services/service-item.html

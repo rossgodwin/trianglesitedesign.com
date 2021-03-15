@@ -1,15 +1,64 @@
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
+	function elementScrolled(el) {
+		var docViewTop = $(window).scrollTop();
+		var docViewBottom = docViewTop + $(window).height();
+		var elTop = $(el).offset().top;
+		return ((elTop <= docViewBottom) && (elTop >= docViewTop));
+	}
+	
 	$(document).ready(function() {
+		var fadeInElements = [
+			'.tsd-page-footer-contact-address',
+			'.tsd-page-footer-contact-phone_number',
+			'.tsd-page-footer-contact-hours'
+		];
+
+		jQuery.each(fadeInElements, function(i, el) {
+			if (elementScrolled(el)) {
+				$(el).addClass('tsd-animate-fadein-element-visible');
+			}
+		});
+		
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
 
-		$(".tsd-services-service").click(function(e) {
+		$(".tsd-services-expand-all").click(function(e) {
+			$('.tsd-services-service-clickable').each(function () {
+				if (!$(this).hasClass("tsd-services-service-open")) {
+					$(this).toggleClass("tsd-services-service-open");
+					$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
+					$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
+				}
+			});
+		});
+		
+		$(".tsd-services-service-clickable").click(function(e) {
 			$(this).toggleClass("tsd-services-service-open");
 			$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
 			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
+		});
+
+		$(window).scroll(function() {
+			jQuery.each(fadeInElements, function(i, el) {
+				if (!$(el).hasClass('tsd-animate-fadein-element-visible') && elementScrolled(el)) {
+					$(el).addClass('tsd-animate-fadein-element-visible');
+				}
+			});
+		});
+		
+		$('.tsd-leadership-experience-metric-counter').each(function () {
+		    $(this).prop('Counter',0).animate({
+		        Counter: $(this).text()
+		    }, {
+		        duration: 1500,
+		        easing: 'linear',
+		        step: function (now) {
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
 		});
 	});
 </script>

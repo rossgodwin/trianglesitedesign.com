@@ -25,7 +25,7 @@ title: &title "Home"
 					<div class="tsd-home-marketing-photo-caption">
 						<h4>Dollar General | Manteo, NC</h4>
 						<p>
-							TSD has designed over 170 Dollar General stores as of January 2019, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. TSD knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
+							{{ site.tsd.name_abbreviation }} has designed over 170 Dollar General stores as of January 2019, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. {{ site.tsd.name_abbreviation }} knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
 						</p>
 					</div>
 				</div>
@@ -53,7 +53,7 @@ title: &title "Home"
 					<div class="tsd-home-marketing-photo-caption">
 						<h4>Wakefield Commons | Raleigh, NC</h4>
 						<p>
-							This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC).  Given the project is located in a watershed, many stormwater and grading challenges surfaced that TSD had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
+							This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC).  Given the project is located in a watershed, many stormwater and grading challenges surfaced that {{ site.tsd.name_abbreviation }} had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
 						</p>
 					</div>
 				</div>
@@ -81,7 +81,7 @@ title: &title "Home"
 					<div class="tsd-home-marketing-photo-caption">
 						<h4>Panera Bread | Durham, NC</h4>
 						<p>
-							Partnering with a developer for Panera Bread Company, TSD has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
+							Partnering with a developer for Panera Bread Company, {{ site.tsd.name_abbreviation }} has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
 						</p>
 					</div>
 				</div>
@@ -92,24 +92,30 @@ title: &title "Home"
 		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
 		
 		<section class="tsd-home-content-section">
-			<div class="tsd-home-benefits-grid">
-				{% include snippets/marketing-sign.html
-					slogan="Why Choose Triangle Site Design"
-					quality="The Benefits of Partnering with Us"
-					positive="Customer Involvement And Communication"
-					description="" %}
-					
-				<div>
-					{% include snippets/plus-sign-bullet-point.html text="Value Engineering" %}
-					{% include snippets/plus-sign-bullet-point.html text="Premium value placed on your schedule" %}
-					{% include snippets/plus-sign-bullet-point.html text="Emphasis on efficient, cost-effective design" %}
-					{% include snippets/plus-sign-bullet-point.html text="Superior and personalized customer service" %}
-					{% include snippets/plus-sign-bullet-point.html text="Timely, cost-efficient and excellent work" %}
-					{% include snippets/plus-sign-bullet-point.html text="Valuable management, technical, and regulatory knowledge and experience" %}
-					{% include snippets/plus-sign-bullet-point.html text="Expertise and professional service with emphasis on high quality" %}
-					{% include snippets/plus-sign-bullet-point.html text="Attention to detail" %}
-					{% include snippets/plus-sign-bullet-point.html text="Responsiveness to client inquiries" %}
-					{% include snippets/plus-sign-bullet-point.html text="Honesty and integrity" %}
+			<div class="tsd-cardlist-grid">
+				<div class="tsd-cardlist-card-wrapper">
+					<div class="tsd-cardlist-card">
+						<h2>Why Choose {{ site.tsd.name }}</h2>
+						<p>
+							The benefits of partnering with {{ site.tsd.name }}
+						</p>
+					</div>
+				</div>
+				<div class="tsd-cardlist-list-wrapper">
+					<div class="tsd-cardlist-list">
+						<ul>
+							<li>Value Engineering</li>
+							<li>Premium value placed on your schedule</li>
+							<li>Emphasis on efficient, cost-effective design</li>
+							<li>Superior and personalized customer service</li>
+							<li>Timely, cost-efficient and excellent work</li>
+							<li>Valuable management, technical, and regulatory knowledge and experience</li>
+							<li>Expertise and professional service with emphasis on high quality</li>
+							<li>Attention to detail</li>
+							<li>Responsiveness to client inquiries</li>
+							<li>Honesty and integrity</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
