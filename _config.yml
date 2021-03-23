@@ -30,6 +30,11 @@ tsd:
     display-url: https://www.facebook.com/trianglesitedesign
     url: https://www.facebook.com/trianglesitedesign
 
+request_proposal_email:
+  to: rlowder@trianglesitedesign.com;mlowder@trianglesitedesign.com
+  subject: Request for Proposal
+  body: Please reach to me.
+
 # Jekyll configuration
 version: v1.2.0
 permalink: /:categories/:title/

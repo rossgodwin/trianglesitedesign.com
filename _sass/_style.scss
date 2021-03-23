@@ -3,6 +3,7 @@ html {
 	font-family: $tsd-font-helveticaPoppins;
 	font-size: 16px;
 	letter-spacing: 1px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -85,6 +86,9 @@ a {
 	background: $tsd-color-red;
 	color: $color-white;
 	border-color: transparent;
+	padding: .3em 1em;
+	line-height: 1.7em;
+	font-weight: 600;
 	&:hover {
 		background: $color-white;
 		border-color: $tsd-color-red;
@@ -116,12 +120,6 @@ a {
 		font-size: 38px;
 		font-weight: 700;
 		text-transform: uppercase;
-	}
-	
-	.tsd-btn-primary {
-		padding: .3em 1em;
-		line-height: 1.7em;
-		font-weight: 600;
 	}
 }
 
@@ -276,7 +274,6 @@ a {
 }
 
 .tsd-cardlist-card {
-	@extend .tsd-cardlist-card-animate;
 	background-image: url('#{$site-baseurl}/assets/images/bg_poly-accent-red.png');
 	background-repeat: no-repeat;
 	background-position: 75% 75%;
@@ -297,11 +294,6 @@ a {
 	}
 }
 
-.tsd-cardlist-card-animate {
-	overflow: hidden;
-	animation: tsd-animate-move-from-bottom-to-top 1s 1;
-}
-
 .tsd-cardlist-list-wrapper {
 	grid-area: cll;
 }
@@ -315,11 +307,6 @@ a {
 	ul li {
 		margin-bottom: 15px;
 	}
-}
-
-.tsd-cardlist-list-animate {
-	overflow: hidden;
-	animation: tsd-animate-move-from-top-to-bottom 1s 1;
 }
 
 // ------------- Page -----------------
@@ -450,13 +437,6 @@ a {
 	}
 }
 
-.tsd-page-content-header-animate {
-	overflow: hidden;
-	section {
-		animation: tsd-animate-move-from-bottom-to-top 1s 1;
-	}
-}
-
 .tsd-page-content-header-inner {
 	height: 100%;
 	display: grid;
@@ -568,7 +548,6 @@ a {
 
 .tsd-home-header {
 	@extend .tsd-page-content-header;
-	@extend .tsd-page-content-header-animate;
 }
 
 .tsd-home-content {
@@ -654,11 +633,6 @@ a {
 	grid-row-gap: 3px;
 }
 
-.tsd-markets-cardlist-list {
-	@extend .tsd-cardlist-list;
-	@extend .tsd-cardlist-list-animate;
-}
-
 // ------------- Services -----------------
 .tsd-services {
 	@extend .tsd-page-content;
@@ -736,7 +710,6 @@ a {
 
 .tsd-projects-header {
 	@extend .tsd-page-content-header;
-	@extend .tsd-page-content-header-animate;
 	
 	ul {
 		margin-top: 0;
@@ -848,12 +821,6 @@ a {
 		margin-bottom: 10px;
 		border: 0px;
 		border-top: 3px solid $tsd-color-red;
-	}
-	
-	.tsd-btn-primary {
-		padding: .3em 1em;
-		line-height: 1.7em;
-		font-weight: 600;
 	}
 }
 
@@ -977,6 +944,10 @@ a {
 
 // ------------- Medium devices (tablets, 768px and up) -----------------
 @media (min-width: 768px) {
+	.tsd-element-scroll-snap {
+		scroll-margin-top: $tsd-medium-device-header-height;
+	}
+	
 	// ------------- Page -----------------
 	.tsd-page-wrapper {
 		grid-template-rows: $tsd-medium-device-header-height 1fr auto;
@@ -1062,9 +1033,13 @@ a {
 
 // ------------- Large devices (desktops, 992px and up) -----------------
 @media (min-width: 992px) {
+	.tsd-element-scroll-snap {
+		scroll-margin-top: $tsd-large-device-header-height;
+	}
+	
 	.tsd-cardlist-grid {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 100px auto;
+		grid-template-rows: 50px auto;
 		grid-template-areas:
 			"clc ."
 			"clc cll";
@@ -1133,7 +1108,6 @@ a {
 	
 	.tsd-home-marketing-photo-caption {
 		max-width: 80%;
-		//z-index: 999999 !important;
 	}
 	
 	// ------------- Services -----------------
@@ -1171,41 +1145,4 @@ a {
 	.tsd-page-footer-wrapper {
 		grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
 	}
-}
-
-
-.tsd-animate-fadein-element {
-	visibility: hidden;
-	opacity: 0;
-	font-size: 2px;
-	transition: all 1s;
-	
-	&.tsd-animate-fadein-element-visible {
-		visibility: visible;
-		opacity: 1;
-		font-size: inherit;
-	}
-}
-
-.tsd-page-footer-contact-address {
-	@extend .tsd-animate-fadein-element;
-}
-
-.tsd-page-footer-contact-phone_number {
-	@extend .tsd-animate-fadein-element;
-}
-
-.tsd-page-footer-contact-hours {
-	@extend .tsd-animate-fadein-element;
-}
-
-// https://www.html.am/html-codes/marquees/css-slide-in-text.cfm
-@keyframes tsd-animate-move-from-bottom-to-top {
-	from { margin-top: 15%; }
-	to { margin-top: 0%; }
-}
-
-@keyframes tsd-animate-move-from-top-to-bottom {
-	from { margin-top: -15%; }
-	to { margin-top: 0%; }
 }

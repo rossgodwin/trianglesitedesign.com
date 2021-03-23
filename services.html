@@ -17,12 +17,16 @@ title: &title "Services"
 						description=service.description %}
 				{% endfor %}
 			</div>
+			
+			<div class="tsd-horizontal-align-center">
+				<a class="tsd-btn-primary" href="#more-services" role="button">See More Services</a>
+			</div>
 		</section>
 		
 		{% assign person = site.data.references.people[site.data.references.reference_index_stevenpeedin] %}
 		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
 		
-		<section class="tsd-services-content-section">
+		<section id="more-services" class="tsd-services-content-section tsd-element-scroll-snap">
 			<!--<a class="tsd-services-expand-all">Expand All</a>-->
 			<div class="tsd-services-grid">
 				{% for service in site.data.services.services offset:3 %}

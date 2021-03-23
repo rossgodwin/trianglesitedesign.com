@@ -1,23 +1,30 @@
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
-	function elementScrolled(el) {
+	function elementScrolled(element) {
 		var docViewTop = $(window).scrollTop();
 		var docViewBottom = docViewTop + $(window).height();
-		var elTop = $(el).offset().top;
-		return ((elTop <= docViewBottom) && (elTop >= docViewTop));
+		var elementTop = $(element).offset().top;
+		return ((elementTop <= docViewBottom) && (elementTop >= docViewTop));
 	}
 	
 	$(document).ready(function() {
-		var fadeInElements = [
-			'.tsd-page-footer-contact-address',
-			'.tsd-page-footer-contact-phone_number',
-			'.tsd-page-footer-contact-hours'
+		var animationElements = [
+		    ['tsd-home-header', 'tsd-animate-slidein-page-content-header-visible'],
+		    ['tsd-cardlist-card', 'tsd-animate-slidein-cardlist-card-visible'],
+			['tsd-cardlist-list', 'tsd-animate-slidein-cardlist-list-visible'],
+		    ['tsd-page-footer-contact-address', 'tsd-animate-fadein-element-visible'],
+		    ['tsd-page-footer-contact-phone_number', 'tsd-animate-fadein-element-visible'],
+		    ['tsd-page-footer-contact-hours', 'tsd-animate-fadein-element-visible']
 		];
 
-		jQuery.each(fadeInElements, function(i, el) {
-			if (elementScrolled(el)) {
-				$(el).addClass('tsd-animate-fadein-element-visible');
+		jQuery.each(animationElements, function(i, classPair) {
+			var element = $("." + classPair[0]);
+			if (element != null && element.length) {
+				var animationClass = classPair[1];
+				if (elementScrolled(element)) {
+					$(element).addClass(animationClass);
+				}
 			}
 		});
 		
@@ -25,15 +32,15 @@
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
 
-		$(".tsd-services-expand-all").click(function(e) {
-			$('.tsd-services-service-clickable').each(function () {
-				if (!$(this).hasClass("tsd-services-service-open")) {
-					$(this).toggleClass("tsd-services-service-open");
-					$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
-					$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
-				}
-			});
-		});
+		//$(".tsd-services-expand-all").click(function(e) {
+		//	$('.tsd-services-service-clickable').each(function () {
+		//		if (!$(this).hasClass("tsd-services-service-open")) {
+		//			$(this).toggleClass("tsd-services-service-open");
+		//			$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
+		//			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
+		//		}
+		//	});
+		//});
 		
 		$(".tsd-services-service-clickable").click(function(e) {
 			$(this).toggleClass("tsd-services-service-open");
@@ -42,9 +49,13 @@
 		});
 
 		$(window).scroll(function() {
-			jQuery.each(fadeInElements, function(i, el) {
-				if (!$(el).hasClass('tsd-animate-fadein-element-visible') && elementScrolled(el)) {
-					$(el).addClass('tsd-animate-fadein-element-visible');
+			jQuery.each(animationElements, function(i, classPair) {
+				var element = $("." + classPair[0]);
+				if (element != null && element.length) {
+					var animationClass = classPair[1];
+					if (!$(element).hasClass(animationClass) && elementScrolled(element)) {
+						$(element).addClass(animationClass);
+					}
 				}
 			});
 		});
