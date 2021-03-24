@@ -53,25 +53,28 @@ a {
 	margin-right: auto;
 }
 
+.tsd-horizontal-align-right {
+	text-align: right;
+	margin-left: auto;
+}
+
 .tsd-fontawesome-icon {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 }
 
-.tsd-btn {
+.tsd-button {
 	display: inline-block;
 	font-family: $tsd-font-helveticaSaira;
 	font-size: 1.250rem;
 	text-transform: uppercase;
-	
+	cursor: pointer;
 	display: inline-block;
 	font-weight: bold;
 	padding: .375rem 1rem;
-	//height: 2.75rem;
 	text-align: center;
 	vertical-align: middle;
 	border: 1px solid transparent;
-	//line-height: 1.5;
 	border-radius: 0.25rem;
 	text-decoration: none;
 	user-select: none;
@@ -81,8 +84,8 @@ a {
 	}
 }
 
-.tsd-btn-primary {
-	@extend .tsd-btn;
+.tsd-button-primary {
+	@extend .tsd-button;
 	background: $tsd-color-red;
 	color: $color-white;
 	border-color: transparent;
@@ -94,6 +97,12 @@ a {
 		border-color: $tsd-color-red;
 		color: $tsd-color-red;
 	}
+}
+
+.tsd-button-primary-pressed {
+	background: $color-white;
+	border-color: $tsd-color-red;
+	color: $tsd-color-red;
 }
 
 .tsd-image-responsive {
@@ -659,6 +668,11 @@ a {
 	align-items: top;
 }
 
+.tsd-services-more-services-toolbar {
+	margin-bottom: 15px;
+	@extend .tsd-horizontal-align-center;
+}
+
 .tsd-services-service {
 	border-bottom: 3px solid $tsd-color-red;
 	&.tsd-services-service-open {
@@ -1007,6 +1021,11 @@ a {
 	.tsd-services-grid {
 		grid-template-columns: repeat(2, 1fr);
 		grid-column-gap: 2rem;
+	}
+	
+	.tsd-services-additional-services-toolbar {
+		text-align: left;
+		margin-right: auto;
 	}
 	
 	// ------------- Leadership -----------------
