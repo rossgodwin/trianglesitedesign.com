@@ -751,6 +751,12 @@ a {
 	align-items: top;
 }
 
+.tsd-projects-grid-column {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
 .tsd-project-summary {
 	background-color: $color-white;
 	@extend .tsd-horizontal-align-center;

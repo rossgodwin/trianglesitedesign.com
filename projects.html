@@ -3,39 +3,36 @@ layout: default
 title: &title "Projects"
 ---
 
+{% assign projects = site.data.projects.projects %}
+{% assign project_count = projects.size %}
+{% assign column_one_count = project_count | modulo: 2 | plus: project_count | divided_by: 2 %}
+
 <div class="tsd-projects">
 	{% include snippets/projects/projects-header.html %}
 	
 	<section class="tsd-projects-content">
 		<section class="tsd-projects-content-section">
 			<div class="tsd-projects-grid">
-				{% include snippets/projects/project-summary.html
-					location="Garner, NC"
-					project_name="White Oak Shopping Center"
-					photo_url="assets/images/tsd-slider-bg-03.jpg"
-					description="Located in a thriving area of Garner, this commercial project was so successful that the entire shopping center was leased, including several national retailers like Staples and Burlington Coat Factory.  TSD met aggressive design, permitting and construction schedules, while keeping the client informed and happy."
-				%}
-				
-				{% include snippets/projects/project-summary.html
-					location="Pinehurst, NC"
-					project_name="Golf Pride"
-					photo_url="assets/images/gold-pride-1.png"
-					description="Triangle Site Design assisted Kuester Development with the design of Golf Pride's newest facility, placing the entire corporate, and Research and Development staff under one roof.  Located in Pinehurst, NC this facility challenged us with blending into the natural environment and complementing the adjacent premier golf club resort."
-				%}
-				
-				{% include snippets/projects/project-summary.html
-					location="Concord, NC"
-					project_name="Settlers Landing"
-					photo_url="assets/images/projects/settlers_landing.jpg"
-					description="This mixed use development was designed with 115 townhome units, 336 apartments, and 16 commercial outparcels. It is located at the intersection of US Highway 29 and Pitts School Road, a thriving corridor between Concord and Charlotte. A key goal was to maximize the number of units and make them compatible with city requirements."
-				%}
-				
-				{% include snippets/projects/project-summary.html
-					location="Rockingham, NC"
-					project_name="First Bank"
-					photo_url="assets/images/projects/first_bank_rockingham_nc.jpg"
-					description="Because this was a redevelopment project, some of the challenges included working around existing conditions like utilities and access, and with the adjacent shopping center to meet city requirements, coordinate access, and redesign traffic patterns."
-				%}
+				<div class="tsd-projects-grid-column">
+					{% for project in projects limit:column_one_count %}
+						{% include snippets/projects/project-summary.html
+							location=project.location
+							project_name=project.name
+							photo_url=project.primary-photo-url
+							description=project.description
+						%}
+					{% endfor %}
+				</div>
+				<div class="tsd-projects-grid-column">
+					{% for project in projects offset:column_one_count %}
+						{% include snippets/projects/project-summary.html
+							location=project.location
+							project_name=project.name
+							photo_url=project.primary-photo-url
+							description=project.description
+						%}
+					{% endfor %}
+				</div>
 			</div>
 		</section>
 	</section>
