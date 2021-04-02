@@ -35,5 +35,8 @@ title: &title "Projects"
 				</div>
 			</div>
 		</section>
+		
+		{% assign person = site.data.references.people[site.data.references.reference_index_mattlowder] %}
+		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
 	</section>
 </div>

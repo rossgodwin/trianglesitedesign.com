@@ -6,6 +6,7 @@ reference_index_stevenpeedin: 2
 reference_index_paulwilliams: 3
 reference_index_leehumphrey: 4
 reference_index_danesambrick: 5
+reference_index_mattlowder: 6
 
 people:
   - name: Adam Sellner
@@ -32,3 +33,7 @@ people:
     title: President
     company: Sambrick Commercial Realty
     quote: TSD has the determination and perseverance to stay engaged with the client while maintaining the principal of honoring their word with respect to cost. Matt and his team have been not only integral to our company growth and success, but also a trusted resource over many years.
+  - name: Matt Lowder
+    title: Owner
+    company: Triangle Site Design
+    quote: At Triangle Site Design, building relationships is as important as building sites. With us, you will never be just another job.

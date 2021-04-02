@@ -1,37 +1,18 @@
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-	function elementScrolled(element) {
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
-		var elementTop = $(element).offset().top;
-		return ((elementTop <= docViewBottom) && (elementTop >= docViewTop));
-	}
-	
-	$(document).ready(function() {
-		var animationElements = [
-		    ['tsd-home-header', 'tsd-animate-slidein-page-content-header-visible'],
-		    ['tsd-cardlist-card', 'tsd-animate-slidein-cardlist-card-visible'],
-			['tsd-cardlist-list', 'tsd-animate-slidein-cardlist-list-visible'],
-		    ['tsd-page-footer-contact-address', 'tsd-animate-fadein-element-visible'],
-		    ['tsd-page-footer-contact-phone_number', 'tsd-animate-fadein-element-visible'],
-		    ['tsd-page-footer-contact-hours', 'tsd-animate-fadein-element-visible']
-		];
+	AOS.init({
+		duration: 1000
+	});
+</script>
 
-		jQuery.each(animationElements, function(i, classPair) {
-			var element = $("." + classPair[0]);
-			if (element != null && element.length) {
-				var animationClass = classPair[1];
-				if (elementScrolled(element)) {
-					$(element).addClass(animationClass);
-				}
-			}
-		});
-		
+<script>
+	$(document).ready(function() {
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
-
+		
 		$("#tsd-services-more-services-toggle-button").click(function(e) {
 			var el = $(this);
 			
@@ -71,18 +52,6 @@
 			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
 		});
 
-		$(window).scroll(function() {
-			jQuery.each(animationElements, function(i, classPair) {
-				var element = $("." + classPair[0]);
-				if (element != null && element.length) {
-					var animationClass = classPair[1];
-					if (!$(element).hasClass(animationClass) && elementScrolled(element)) {
-						$(element).addClass(animationClass);
-					}
-				}
-			});
-		});
-		
 		$('.tsd-leadership-experience-metric-counter').each(function () {
 		    $(this).prop('Counter',0).animate({
 		        Counter: $(this).text()

@@ -1,13 +1,13 @@
-{% assign person = site.data.leadership.matt %}
+{% assign person = site.data.references.people[site.data.references.reference_index_mattlowder] %}
 {% capture _slogan %}
-	{{ person.name }} - {{ person.title }} | {{ site.tsd.name }}
+	{{ person.name }} - {{ person.title }} | {{ person.company }}
 {% endcapture %}
 {% capture _description %}
-	"At {{ site.tsd.name }}, building relationships is as important as building sites. With us,
-	you will never be just another job."
+	"{{ person.quote }}"
 {% endcapture %}
 {% include page-content-header.html
 	style_class="tsd-markets-header"
+	aos_animation_class="fade-down-right"
 	title="Markets"
 	slogan=_slogan
 	description=_description %}
