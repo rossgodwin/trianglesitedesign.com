@@ -84,6 +84,12 @@ a {
 	}
 }
 
+.tsd-button-icon-right {
+	i {
+		margin-left: 10px;
+	}
+}
+
 .tsd-button-primary {
 	@extend .tsd-button;
 	background: $tsd-color-red;
@@ -132,53 +138,6 @@ a {
 	}
 }
 
-.tsd-quote {
-	position: relative;
-	background: $tsd-color-light-gray;
-	border: 1px solid rgba(0, 0, 0, 0.025);
-	padding: 1.5rem;
-	padding-left: 3rem;
-	font-family: $tsd-font-georgiaPlayfair;
-	//font-family: $tsd-font-helveticaSaira;
-	&:before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 40px 40px 0 0;
-		border-color: $tsd-color-red transparent transparent transparent;
-	}
-	
-	h4 {
-		line-height: 1.8em;
-		font-size: 13px;
-		color: $tsd-color-dark-gray;
-	}
-	
-	p {
-		//font-size: 20px;
-		color: $tsd-color-gray;
-	}
-	
-	.fa-quote-left {
-		position: absolute;
-		left: 0.35rem;
-		top: 0.3rem;
-		color: $color-white;
-		font-size: 0.75rem;
-	}
-	
-	.svg-inline--fa {
-		display: inline-block;
-		height: 1em;
-		vertical-align: -0.125em;
-	}
-}
-
 .tsd-quote-angled-edges {
 	@include angle(both);
 	background: $tsd-color-gray;
@@ -188,7 +147,7 @@ a {
 	
 	p {
 		color: $color-white;
-		font-size: 1.7em;
+		font-size: 1.5em;
 		margin-bottom: 10px;
 	}
 
