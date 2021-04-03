@@ -12,6 +12,8 @@
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
+
+		$("#year").html(new Date().getFullYear());
 		
 		$("#tsd-services-more-services-toggle-button").click(function(e) {
 			var el = $(this);

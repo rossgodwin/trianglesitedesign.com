@@ -1,11 +1,11 @@
 # Site wide configuration
 destination: docs
 
-url: ""
+url: "https://trianglesitedesign.com"
 baseurl: ""
-
-title: Triangle Site Design
-description: Civil Consulting and Engineering Firm
+locale: en
+title: Civil Engineering Services, Raleigh NC | Triangle Site Design
+description: A civil consulting and engineering firm that specializes in land planning and land development design in North Carolina, South Carolina and Virginia.
 location: Raleigh, NC
 
 # Analytics
