@@ -8,13 +8,27 @@
 </script>
 
 <script>
+	function onScrollScrollToTopButtonRenderer() {
+		let y = window.scrollY - 400;
+		
+		if (y > 0) {
+			$(".tsd-button-scroll_to_top").removeClass("hide");
+			$(".tsd-button-scroll_to_top").addClass("show");
+		} else {
+			$(".tsd-button-scroll_to_top").removeClass("show");
+			$(".tsd-button-scroll_to_top").addClass("hide");
+		}
+	}
+	
 	$(document).ready(function() {
 		$(".tsd-page-header-menu-toggler").click(function(e) {
 			$(".tsd-page-header-navigation").toggleClass("active");
 		});
 
 		$("#year").html(new Date().getFullYear());
-		
+
+		$(window).scroll(onScrollScrollToTopButtonRenderer);
+
 		$("#tsd-services-more-services-toggle-button").click(function(e) {
 			var el = $(this);
 			
@@ -46,6 +60,15 @@
 					}
 				});
 			}
+		});
+		
+		$(".tsd-button-scroll_to_top").click(function(e) {
+			e.preventDefault();
+			window.scroll({
+				top: 0, 
+				left: 0, 
+				behavior: 'smooth'
+			});
 		});
 		
 		$(".tsd-services-service-clickable").click(function(e) {
