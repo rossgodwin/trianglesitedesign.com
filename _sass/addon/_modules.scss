@@ -1,0 +1,22 @@
+.linkedin-icon-button, .facebook-icon-button {
+	span {
+		color: $tsd-color-red;
+		
+		&:hover {
+			color: $color-white;
+			i.fa-inverse {
+				color: $tsd-color-red;
+			}
+		}
+	}
+}
+
+.quote {
+	p {
+		margin-bottom: 10px;
+		
+		i {
+			margin-right: 10px;
+		}
+	}
+}

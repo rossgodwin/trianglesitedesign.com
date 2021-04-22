@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: &title "Projects"
 ---
 
@@ -36,7 +36,7 @@ title: &title "Projects"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_mattlowder] %}
-		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_mattlowder] %}
+		{% include snippets/components/quote-angled-edges.html quote=_quote %}
 	</section>
 </div>

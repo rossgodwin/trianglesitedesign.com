@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: &title "Home"
 ---
 
@@ -13,7 +13,7 @@ title: &title "Home"
 					{% capture _description %}
 						Located in Raleigh, North Carolina, we partner with developers and retailers to deliver superior customer service with high-quality results. We reduce your project cost and time through Value Engineering; we identify and minimize unnecessary cost while improving the value of your desired results.
 					{% endcapture %}
-					{% include snippets/marketing-sign.html
+					{% include snippets/marketing-panel.html
 						slogan="Don't Settle for Less"
 						quality="Superior Customer Service"
 						positive="Total Client Satisfaction"
@@ -32,8 +32,8 @@ title: &title "Home"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_georgebarnes] %}
-		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_georgebarnes] %}
+		{% include snippets/components/quote-angled-edges.html quote=_quote %}
 		
 		<section class="tsd-home-content-section">
 			<div class="tsd-home-marketing-photo-text">
@@ -41,7 +41,7 @@ title: &title "Home"
 					{% capture _description %}
 						At {{ site.tsd.name }}, building relationships is just as important as building sites. You will never be just another job. Services start with gaining an extensive understanding of your situation and needs. We commit to connecting with you personally on every project to create a relationship that leads to a superior product and unsurpassed results.
 					{% endcapture %}
-					{% include snippets/marketing-sign.html
+					{% include snippets/marketing-panel.html
 						slogan="Done The Right Way"
 						quality="Strong Partnership"
 						positive="Customer Involvement And Communication"
@@ -60,8 +60,8 @@ title: &title "Home"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_adamsellner] %}
-		{% include snippets/quote-angled-edges.html reverse=true name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_adamsellner] %}
+		{% include snippets/components/quote-angled-edges.html reverse=true quote=_quote %}
 		
 		<section class="tsd-home-content-section">
 			<div class="tsd-home-marketing-text-photo">
@@ -69,7 +69,7 @@ title: &title "Home"
 					{% capture _description %}
 						{{ site.tsd.name }} is unique in that we have the capabilities of a large firm and the agility of a small firm. With 75+ years of combined service, we have managed a variety of projects across North Carolina, South Carolina, and Virginia.
 					{% endcapture %}
-					{% include snippets/marketing-sign.html
+					{% include snippets/marketing-panel.html
 						slogan="Just What You Need"
 						quality="High-Quality Product"
 						positive="Wide Range of Civil Engineering Design Services on Time and Within Budget"
@@ -88,8 +88,8 @@ title: &title "Home"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_leehumphrey] %}
-		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_leehumphrey] %}
+		{% include snippets/components/quote-angled-edges.html quote=_quote %}
 		
 		<section class="tsd-home-content-section">
 			<div class="tsd-cardlist-grid">
@@ -120,7 +120,7 @@ title: &title "Home"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_paulwilliams] %}
-		{% include snippets/quote-angled-edges.html reverse=true name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_paulwilliams] %}
+		{% include snippets/components/quote-angled-edges.html reverse=true quote=_quote %}
 	</section>
 </div>

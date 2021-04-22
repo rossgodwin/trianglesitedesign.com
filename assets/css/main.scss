@@ -7,6 +7,19 @@ $site-baseurl: '{{ site.baseurl }}';
 
 @import
 	"reset",
+	
+	"fontawesome-free-5.15.3-web/fontawesome.scss",
+	"fontawesome-free-5.15.3-web/solid.scss",
+	"fontawesome-free-5.15.3-web/brands.scss",
+	
 	"variables",
 	"mixins",
+	"addon/commons",
+	"addon/modules",
+	
+	"layout/page",
+	"layout/leadership",
+	"layout/services",
+	"layout/404",
+	
 	"style"

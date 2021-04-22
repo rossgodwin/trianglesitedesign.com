@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: &title "Services"
 ---
 
@@ -33,8 +33,8 @@ title: &title "Services"
 			</div>
 		</section>
 		
-		{% assign person = site.data.references.people[site.data.references.reference_index_stevenpeedin] %}
-		{% include snippets/quote-angled-edges.html name=person.name title=person.title company=person.company quote=person.quote %}
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_stevenpeedin] %}
+		{% include snippets/components/quote-angled-edges.html quote=_quote %}
 		
 		<section id="more-services" class="tsd-services-content-section tsd-element-scroll-snap">
 			<div class="tsd-services-more-services-toolbar">

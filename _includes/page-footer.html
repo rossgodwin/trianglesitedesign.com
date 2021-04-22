@@ -21,9 +21,20 @@
 						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
 						<i class="fa fa-mobile-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
-					<div class="tsd-page-footer-contact-phone_number">
+					<div>
 						<a href="tel:{{ site.tsd.phone_number }}">
 							{{ site.tsd.phone_number }}
+						</a>
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fas fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						{% assign person = site.data.leadership.rinnette %}
+						<a href="mailto:{{ person.email }}" target="_blank">
+							{{ person.email }}
 						</a>
 					</div>
 					
@@ -40,23 +51,18 @@
 				
 				<div class="tsd-page-footer-contact-connect">
 					<div>Connect With Us</div>
-					<a href="{{ site.tsd.linkedin.url }}" target="_blank">
-						<span class="fa-stack fa-2x" style="margin-right: 10px;">
-							<i class="fas fa-square fa-stack-2x" aria-hidden="true"></i>
-							<i class="fab fa-linkedin-in fa-stack-1x fa-inverse" aria-hidden="true"></i>
-						</span>
-					</a>
-					<a href="{{ site.tsd.facebook.url }}" target="_blank">
-						<span class="fa-stack fa-2x">
-							<i class="fas fa-square fa-stack-2x" aria-hidden="true"></i>
-							<i class="fab fa-facebook-f fa-stack-1x fa-inverse" aria-hidden="true"></i>
-						</span>
-					</a>
+					{% include snippets/components/buttons/linkedin-icon-button.html %}
+					
+					{% include snippets/components/buttons/facebook-icon-button.html %}
 				</div>
 			</div>
 			
 			<div class="tsd-page-footer-legal">
-				&copy; <span id="year"></span> - {{ site.tsd.legal_name }} - All Rights Reserved
+				&copy; <span id="year"></span> - {{ site.tsd.name }}
+				<br>
+				Civil Consulting & Engineering Firm
+				<br>
+				{{ site.tsd.address.citystate }}
 			</div>
 		</div>
 	</div>

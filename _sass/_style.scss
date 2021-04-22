@@ -1,46 +1,4 @@
-html {
-	height: 100%;
-	font-family: $tsd-font-helveticaPoppins;
-	font-size: 16px;
-	letter-spacing: 1px;
-	scroll-behavior: smooth;
-}
 
-body {
-	height: 100%;
-}
-
-.root {
-	height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	color: $tsd-color-red;
-	font-family: $tsd-font-helveticaPoppins;
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	padding: 0 0 10px 0;
-	margin: 0;
-}
-
-h5 {
-	line-height: 1.8em;
-	font-size: 11px;
-	font-weight: normal;
-	color: $tsd-color-dark-gray;
-}
-
-p {
-	line-height: 1.4em;
-	padding: 0;
-	margin: 0;
-	color: $tsd-color-gray;
-}
-
-a {
-	text-decoration: none;
-}
 
 .tsd-horizontal-align-center {
 	text-align: center;
@@ -219,8 +177,8 @@ a {
 		font-size: 1.5em;
 		margin-bottom: 10px;
 	}
-
-	h3, h5 {
+	
+	h4, h5 {
 		color: $tsd-color-dark-gray;
 	}
 }
@@ -230,14 +188,15 @@ a {
 	@include angle(both, true);
 }
 
-.tsd-marketing-sign {
+.tsd-marketing-panel {
+	font-size: 1rem;
+	
 	h2, h3 {
 		letter-spacing: 1px;
 	}
 	
 	h2 {
 		line-height: 1.4em;
-		//font-family: $tsd-font-georgiaPlayfair;
 		font-size: 2.375em;
 		color: $tsd-color-gray;
 	}
@@ -249,16 +208,14 @@ a {
 	
 	p {
 		line-height: 2em;
-		//font-family: $tsd-font-helveticaPoppins;
-		font-size: 16px;
 		letter-spacing: 1px;
 		color: $tsd-color-gray;
 	}
 }
 
-.tsd-marketing-sign-divider {
+.tsd-marketing-panel-divider {
 	position: relative;
-	margin: 15px 0;
+	margin: 0.938em 0;
 	max-width: 60px;
 	height: 2px;
 	margin-left: 0px;
@@ -276,7 +233,7 @@ a {
 		content: "";
 	}
 	
-	.tsd-marketing-sign-divider-internal {
+	.tsd-marketing-panel-divider-internal {
 		display: inline-block;
 		width: 100%;
 	}
@@ -346,238 +303,7 @@ a {
 	}
 }
 
-// ------------- Page -----------------
-.tsd-page-wrapper {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	grid-template-columns: minmax(0, 1fr);
-	grid-template-areas:
-		// h = header
-		// c = content
-		// f = footer
-		"h"
-		"c"
-		"f";
-}
 
-// ------------- Page Header -----------------
-.tsd-page-header {
-	grid-area: h;
-	z-index: 10;
-}
-
-.tsd-page-header-wrapper {
-	display: flex;
-	flex-direction: column;
-	padding: $tsd-small-device-page-header-top-bottom-padding $tsd-small-device-page-left-right-padding;
-	background-color: $color-white;
-	border-bottom: 1px solid #ccc;
-}
-
-.tsd-page-header-title {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.tsd-page-header-logo-image {
-	width: $tsd-small-device-page-header-logo-image-width;
-	height: $tsd-small-device-page-header-logo-image-height;
-}
-
-.tsd-page-header-menu-toggler {
-	@include opacity(0.8);
-	padding: 0rem .6rem;
-	background-color: transparent;
-	border: 0px;
-	&:hover {
-		@include opacity(1);
-	}
-	&:focus {
-		outline: 0 !important;
-	}
-}
-
-.tsd-page-header-navigation {
-	display: none;
-	text-align: center;
-	&.active {
-		display: grid;
-		-webkit-transition: all 0.4s ease 0s;
-		transition: all 0.4s ease 0s;
-	}
-	
-	ul {
-		@extend .tsd-unordered-list-no-bullets;
-		
-		li {
-			display: vertical;
-			height: 2.35rem;
-			font-weight: bold;
-			font-size: 0.875rem;
-			text-transform: uppercase;
-			
-			a {
-				color: $tsd-color-gray;
-			}
-			
-			&.active {
-				a {
-					color: $tsd-color-red;
-					border-bottom: 3px solid $tsd-color-red;
-				}
-			}
-		}
-	}
-}
-
-// ------------- Page Content -----------------
-.tsd-page-content {
-	grid-area: c;
-	display: grid;
-	grid-template-rows: auto 10px 1fr 75px;
-	grid-template-columns: minmax(0, 1fr);
-	grid-template-areas:
-		// ch = content header
-		// cm = content main
-		"ch"
-		"."
-		"cm";
-}
-
-.tsd-page-content-header {
-	grid-area: ch;
-	height: $tsd-page-content-large-header-height;
-	background:
-		linear-gradient(
-			rgba(0,0,0,0.7), 
-			rgba(0,0,0,0.7)
-		),
-		url('#{$site-baseurl}/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg');
-	margin-bottom: 25px;
-	z-index: 1;
-	
-	h3 {
-		font-size: 2.5rem;
-		color: $color-white;
-		font-family: $tsd-font-helveticaSaira;
-	}
-	
-	p {
-		//font-weight: 700;
-		font-size: 1.250rem;
-		//text-shadow: 0.08rem 0rem 0.27rem $color-black;
-		color: $color-white;
-	}
-	
-	section {
-		@extend .tsd-page-content-header-inner;
-	}
-}
-
-.tsd-page-content-header-inner {
-	height: 100%;
-	display: grid;
-	align-items: center;
-	@extend .tsd-horizontal-align-center;
-	padding: 0 $tsd-small-device-page-left-right-padding;
-}
-
-.tsd-page-content-main {
-	grid-area: cm;
-}
-
-.tsd-page-content-width {
-	padding: 0 $tsd-small-device-page-left-right-padding;
-}
-
-// ------------- Page Footer -----------------
-.tsd-page-footer {
-	grid-area: f;
-	background-color: $tsd-color-light-gray;
-	border-top: 10px solid $tsd-color-red;
-	font-size: 0.875rem;
-}
-
-.tsd-page-footer-wrapper {
-	padding: $tsd-small-device-page-footer-top-bottom-padding $tsd-small-device-page-left-right-padding;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-areas:
-		// fw = footer wrapper
-		"fw";
-}
-
-.tsd-page-footer-content {
-	background-color: $color-white;
-	grid-area: fw;
-	display: grid;
-	grid-row-gap: 1rem;
-	grid-template-columns: 1fr;
-	
-	.tsd-request-proposal {
-		text-align: center;
-		border-bottom: 5px solid $tsd-color-red;
-	}
-}
-
-.tsd-page-footer-contact {
-	padding: 0 1rem;
-	display: grid;
-	grid-row-gap: 1rem;
-	grid-template-areas:
-		// fci = contact info
-		// fcc = contact connect
-		"fci"
-		"fcc";
-	align-items: top;
-}
-
-.tsd-page-footer-contact-info {
-	@extend .tsd-horizontal-align-center;
-	grid-area: fci;
-	display: grid;
-	grid-template-columns: minmax(auto, max-content) auto;
-	grid-column-gap: 1.250rem;
-	grid-row-gap: 0.625rem;
-	align-items: center;
-	color: $tsd-color-gray;
-	
-	div {
-		@extend .tsd-horizontal-align-left;
-		line-height: 1.5rem;
-	}
-	
-	a {
-		color: $tsd-color-gray;
-		padding-bottom: 1px;
-		border-bottom: 1px dashed;
-	}
-}
-
-.tsd-page-footer-contact-connect {
-	@extend .tsd-horizontal-align-center;
-	grid-area: fcc;
-	align-items: top;
-	
-	div {
-		margin-bottom: 10px;
-		font-weight: bold;
-		font-size: 0.875rem;
-		text-transform: uppercase;
-		color: $tsd-color-gray;
-	}
-	
-	span {
-		color: $tsd-color-red;
-	}
-}
-
-.tsd-page-footer-legal {
-	@extend .tsd-horizontal-align-center;
-	font-size: 0.625rem;
-	margin-bottom: 0.625rem;
-}
 
 // ------------- Home -----------------
 .tsd-home {
@@ -671,79 +397,6 @@ a {
 	grid-row-gap: 3px;
 }
 
-// ------------- Services -----------------
-.tsd-services {
-	@extend .tsd-page-content;
-}
-
-.tsd-services-header {
-	@extend .tsd-page-content-header;
-}
-
-.tsd-services-content {
-	@extend .tsd-page-content-main;
-}
-
-.tsd-services-content-section {
-	@extend .tsd-page-content-width;
-	display: grid;
-	grid-row-gap: 3px;
-}
-
-.tsd-services-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-row-gap: 2rem;
-	align-items: top;
-}
-
-.tsd-services-more-services-toolbar {
-	margin-bottom: 15px;
-	@extend .tsd-horizontal-align-center;
-}
-
-.tsd-services-service {
-	border-bottom: 3px solid $tsd-color-red;
-	&.tsd-services-service-open {
-		border-bottom: 0;
-	}
-}
-
-.tsd-services-service-clickable {
-	@extend .tsd-services-service;
-}
-
-.tsd-services-service-title {
-}
-
-.tsd-services-service-title:before {
-	float: right;
-}
-
-.tsd-services-service-title-clickable {
-	@extend .tsd-services-service-title;
-	cursor: pointer;
-}
-
-.tsd-services-service-toggle-icon:before {
-	@extend .tsd-fontawesome-icon;
-	margin-left: 20px;
-	content: "\f078"; // circle plus icon
-	&.tsd-services-service-toggle-icon-open {
-		content: "\f077"; // circle minus icon
-	}
-}
-
-.tsd-services-service-description {
-	display: none;
-	padding-bottom: 15px;
-	&.tsd-services-service-description-open {
-		display: grid;
-		//-webkit-transition: all 5s ease 5s;
-		//transition: all 5s ease 5s;
-	}
-}
-
 // ------------- Projects -----------------
 .tsd-projects {
 	@extend .tsd-page-content;
@@ -805,289 +458,19 @@ a {
 	}
 }
 
-// ------------- Leadership -----------------
-.tsd-leadership {
-	@extend .tsd-page-content;
-}
-
-.tsd-leadership-header {
-	@extend .tsd-page-content-header;
-}
-
-.tsd-leadership-content {
-	@extend .tsd-page-content-main;
-}
-
-.tsd-leadership-bio-content {
-	@extend .tsd-page-content-main;
-	margin-top: 20px;
-}
-
-.tsd-leadership-content-section {
-	@extend .tsd-page-content-width;
-	display: grid;
-	grid-row-gap: 3px;
-	
-	.tsd-bullet-point {
-		i {
-			margin-right: 5px;
-		}
-		
-		span {
-			color: $tsd-color-red;
-		}
-	}
-	
-	.tsd-leadership-bio {
-		margin-top: 10px;
-	}
-}
-
-.tsd-leadership-marketing-grid {
-	display: grid;
-	grid-row-gap: 2rem;
-	margin-bottom: 60px;
-}
-
-.tsd-leadership-team-grid {
-	display: grid;
-	grid-row-gap: 2rem;
-}
-
-.tsd-leadership-preview {
-	@extend .tsd-horizontal-align-center;
-	border: 1px solid $tsd-color-light-gray;
-	box-shadow: 0px 0px 4px 2px #d6d9dc;
-	padding: 30px;
-	
-	img {
-		border-radius: 7px;
-		margin-bottom: 10px;
-	}
-	
-	hr {
-		width: 100%;
-		margin-top: 0;
-		margin-bottom: 10px;
-		border: 0px;
-		border-top: 3px solid $tsd-color-red;
-	}
-}
-
-.tsd-leadership-bio {
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-row-gap: 1rem;
-	margin-bottom: 1rem;
-	//background: $tsd-color-light-gray;
-	border: 1px solid rgba(0, 0, 0, 0.025);
-	padding: 1rem;
-	
-	hr {
-		width: 100%;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		border: 0px;
-		border-top: 1px solid $tsd-color-red;
-	}
-	
-	a {
-		color: $tsd-color-gray;
-	}
-	
-	h5 {
-		padding: 0;
-	}
-	
-	&:before {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.4;
-		background-image: url('#{$site-baseurl}/assets/images/bg_poly-core-off-white.jpg');
-		background-repeat: no-repeat;
-		background-position: 75% 75%;
-		background-size: cover;
-		z-index: -1;
-	}
-}
-
-.tsd-leadership-bio-photo {
-	max-width: 370px;
-	min-width: 250px;
-	max-height: 400px;
-	margin-bottom: 1rem;
-	@extend .tsd-horizontal-align-center;
-}
-
-// https://codepen.io/epogeedesign/pen/NWqoXRo
-.tsd-leadership-experience-metric {
-	.tsd-leadership-experience-metric-graphic {
-		position:relative;
-		margin-top: 1em;
-		margin-bottom: 1em;
-		
-		.tsd-leadership-experience-metric-graphic-value {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 2.5em;
-			font-weight: bold;
-			//font-family: $tsd-font-courierNew;
-		}
-	}
-
-	.tsd-leadership-experience-metric-label {
-		text-transform: uppercase;
-		text-align: center;
-	}
-}
-
-.tsd-leadership-experience-metric-graphic-svg {
-	display: block;
-	margin: auto;
-	width: 226px;
-	height: 226px;
-	
-	circle {
-		transform: rotate(-90deg);
-		transform-origin: 50% 50%;
-		stroke-dasharray: 628.32, 628.32;
-		stroke-width: 10;
-		fill: transparent;
-		r: 100;
-		cx: 113;
-		cy: 113;
-
-		&.fill {
-			stroke: #D3D3D3;
-		}
-
-		&.progress {
-			stroke: $tsd-color-red;
-			transition: stroke-dashoffset 0.35s;
-			stroke-dashoffset: 214.16;
-			-webkit-animation: NAME-YOUR-ANIMATION 1.5s forwards;
-			-webkit-animation-timing-function: linear;
-
-			@-webkit-keyframes NAME-YOUR-ANIMATION {
-				0% { stroke-dashoffset: 628.32; }
-				100%   { stroke-dashoffset: 157.08; }
-			}
-		}
-	}
-}
-
 // ------------- Small devices (landscape phones, 576px and up) -----------------
-@media (min-width: 576px) {
+@media (min-width: $device-width-breakpoint-small) {
 }
 
 // ------------- Medium devices (tablets, 768px and up) -----------------
-@media (min-width: 768px) {
+@media (min-width: $device-width-breakpoint-medium) {
 	.tsd-element-scroll-snap {
 		scroll-margin-top: $tsd-medium-device-header-height;
-	}
-	
-	// ------------- Page -----------------
-	.tsd-page-wrapper {
-		grid-template-rows: $tsd-medium-device-header-height 1fr auto;
-	}
-
-	// ------------- Page Header -----------------
-	.tsd-page-header-wrapper {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-		text-align: left;
-		padding: $tsd-medium-device-page-header-top-bottom-padding $tsd-small-device-page-left-right-padding;
-	}
-	
-	.tsd-page-header-logo-image {
-		width: $tsd-medium-device-page-header-logo-image-width;
-		height: $tsd-medium-device-page-header-logo-image-height;
-	}
-	
-	.tsd-page-header-navigation {
-		display: block;
-		text-align: left;
-	}
-
-	.tsd-page-header-navigation ul li {
-		display: inline;
-	}
-	
-	.tsd-page-header-navigation ul li {
-		padding-right: 1.4em;
-	}
-	.tsd-page-header-navigation ul li:last-child {
-		padding-right: 0em;
-	}
-	
-	.tsd-page-header-menu-toggler {
-		display: none;
-	}
-	
-	// ------------- Page Footer -----------------
-	.tsd-page-footer-wrapper {
-		grid-template-columns: 1fr minmax(600px, 1fr) 1fr;
-		grid-template-areas:
-			". fw .";
-	}
-	
-	.tsd-page-footer-contact {
-		grid-template-columns: minmax(300px, 1fr) 1fr;
-		grid-column-gap: 1rem;
-		grid-template-areas:
-			"fci fcc";
-	}
-	
-	// ------------- Services -----------------
-	.tsd-services-grid {
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 2rem;
-	}
-	
-	.tsd-services-additional-services-toolbar {
-		text-align: left;
-		margin-right: auto;
-	}
-	
-	// ------------- Leadership -----------------
-	.tsd-leadership-marketing-grid {
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 2rem;
-	}
-	
-	.tsd-leadership-team-grid {
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 2rem;
-	}
-	
-	.tsd-leadership-bio {
-		grid-template-columns: 1fr 2fr;
-		grid-column-gap: 2rem;
-		padding: 2rem;
-	}
-	
-	.tsd-leadership-bio-photo {
-		margin-bottom: 0;
 	}
 }
 
 // ------------- Large devices (desktops, 992px and up) -----------------
-@media (min-width: 992px) {
+@media (min-width: $device-width-breakpoint-large) {
 	.tsd-element-scroll-snap {
 		scroll-margin-top: $tsd-large-device-header-height;
 	}
@@ -1098,34 +481,6 @@ a {
 		grid-template-areas:
 			"clc ."
 			"clc cll";
-	}
-	
-	// ------------- Page -----------------
-	.tsd-page-wrapper {
-		grid-template-rows: $tsd-large-device-header-height 1fr auto;
-	}
-	
-	// ------------- Page Header -----------------
-	.tsd-page-header-wrapper {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		height: $tsd-large-device-page-header-logo-image-height;
-	}
-	
-	.tsd-page-header-logo-image {
-		width: $tsd-large-device-page-header-logo-image-width;
-		height: $tsd-large-device-page-header-logo-image-height;
-	}
-	
-	// ------------- Page Footer -----------------
-	.tsd-page-footer-wrapper {
-		grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
-	}
-	
-	.tsd-page-footer-contact {
-		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 2rem;
 	}
 	
 	// ------------- Home -----------------
@@ -1165,39 +520,9 @@ a {
 		max-width: 80%;
 	}
 	
-	// ------------- Services -----------------
-	.tsd-services-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	
 	// ------------- Projects -----------------
 	.tsd-projects-grid {
 		grid-template-columns: repeat(2, 1fr);
 		grid-column-gap: 2em;
-	}
-	
-	// ------------- Leadership -----------------
-	.tsd-leadership-team-grid {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-// ------------- Extra large devices (large desktops, 1200px and up) -----------------
-@media (min-width: 1200px) {
-	// ------------- Page Content -----------------
-	.tsd-page-content-header-inner {
-		max-width: 1140px;
-	}
-	
-	.tsd-page-content-width {
-		min-width: 1140px;
-		max-width: 1140px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	// ------------- Page Footer -----------------
-	.tsd-page-footer-wrapper {
-		grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
 	}
 }

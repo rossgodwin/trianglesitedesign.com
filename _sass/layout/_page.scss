@@ -1,0 +1,339 @@
+.tsd-page-wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas:
+		// h = header
+		// c = content
+		// f = footer
+		"h"
+		"c"
+		"f";
+}
+
+// ------------- Header -----------------
+.tsd-page-header {
+	grid-area: h;
+	z-index: 10;
+	font-size: 1rem;
+}
+
+.tsd-page-header-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: $tsd-small-device-page-header-top-bottom-padding $tsd-small-device-page-left-right-padding;
+	background-color: $color-white;
+	border-bottom: 1px solid #ccc;
+}
+
+.tsd-page-header-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.tsd-page-header-logo-image {
+	width: $tsd-small-device-page-header-logo-image-width;
+	height: $tsd-small-device-page-header-logo-image-height;
+}
+
+.tsd-page-header-menu-toggler {
+	@include opacity(0.8);
+	padding: 0em .6em;
+	background-color: transparent;
+	border: 0px;
+	&:hover {
+		@include opacity(1);
+	}
+	&:focus {
+		outline: 0 !important;
+	}
+}
+
+.tsd-page-header-navigation {
+	display: none;
+	text-align: center;
+	&.active {
+		display: grid;
+		-webkit-transition: all 0.4s ease 0s;
+		transition: all 0.4s ease 0s;
+	}
+	
+	ul {
+		@extend .tsd-unordered-list-no-bullets;
+		
+		li {
+			display: vertical;
+			height: 2.35em;
+			font-weight: bold;
+			font-size: 0.875em;
+			text-transform: uppercase;
+			
+			a {
+				color: $tsd-color-gray;
+			}
+			
+			&.active {
+				a {
+					color: $tsd-color-red;
+					border-bottom: 3px solid $tsd-color-red;
+				}
+			}
+		}
+	}
+}
+
+// ------------- Content -----------------
+.tsd-page-content {
+	grid-area: c;
+	display: grid;
+	grid-template-rows: auto 10px 1fr 75px;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas:
+		// ch = content header
+		// cm = content main
+		"ch"
+		"."
+		"cm";
+}
+
+.tsd-page-content-header {
+	grid-area: ch;
+	height: $tsd-page-content-large-header-height;
+	background:
+		linear-gradient(
+			rgba(0,0,0,0.7), 
+			rgba(0,0,0,0.4)
+		),
+		url('#{$site-baseurl}/assets/images/Wakefield-Commons-Raleigh-NC-IMG_9870-panaramic-1912x444.jpeg');
+	margin-bottom: 25px;
+	z-index: 1;
+	
+	h3 {
+		font-size: 2.5rem;
+		color: $color-white;
+		font-family: $tsd-font-helveticaSaira;
+	}
+	
+	p {
+		font-size: 1.250rem;
+		color: $color-white;
+	}
+	
+	section {
+		@extend .tsd-page-content-header-inner;
+	}
+	
+	.quote {
+		h5 {
+			color: $color-white;
+		}
+	}
+}
+
+.tsd-page-content-header-inner {
+	height: 100%;
+	display: grid;
+	align-items: center;
+	@extend .tsd-horizontal-align-center;
+	padding: 0 $tsd-small-device-page-left-right-padding;
+}
+
+.tsd-page-content-main {
+	grid-area: cm;
+}
+
+.tsd-page-content-width {
+	padding: 0 $tsd-small-device-page-left-right-padding;
+}
+
+// ------------- Footer -----------------
+.tsd-page-footer {
+	grid-area: f;
+	background-color: $tsd-color-light-gray;
+	border-top: 10px solid $tsd-color-red;
+	font-size: 0.875rem;
+}
+
+.tsd-page-footer-wrapper {
+	padding: $tsd-small-device-page-footer-top-bottom-padding $tsd-small-device-page-left-right-padding;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		// fw = footer wrapper
+		"fw";
+}
+
+.tsd-page-footer-content {
+	background-color: $color-white;
+	grid-area: fw;
+	display: grid;
+	grid-row-gap: 1rem;
+	grid-template-columns: 1fr;
+	
+	.tsd-request-proposal {
+		text-align: center;
+		border-bottom: 5px solid $tsd-color-red;
+	}
+}
+
+.tsd-page-footer-contact {
+	padding: 0 1rem;
+	display: grid;
+	grid-row-gap: 1rem;
+	grid-template-areas:
+		// fci = contact info
+		// fcc = contact connect
+		"fci"
+		"fcc";
+	align-items: top;
+}
+
+.tsd-page-footer-contact-info {
+	@extend .tsd-horizontal-align-center;
+	grid-area: fci;
+	display: grid;
+	grid-template-columns: minmax(auto, max-content) auto;
+	grid-column-gap: 1.250rem;
+	grid-row-gap: 0.625rem;
+	align-items: center;
+	color: $tsd-color-gray;
+	
+	div {
+		@extend .tsd-horizontal-align-left;
+		line-height: 1.5rem;
+	}
+	
+	a {
+		color: $tsd-color-gray;
+		padding-bottom: 1px;
+		border-bottom: 1px dashed;
+	}
+}
+
+.tsd-page-footer-contact-connect {
+	@extend .tsd-horizontal-align-center;
+	grid-area: fcc;
+	align-items: top;
+	
+	div {
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		color: $tsd-color-gray;
+	}
+}
+
+.tsd-page-footer-legal {
+	@extend .tsd-horizontal-align-center;
+	font-size: 0.625rem;
+	margin-bottom: 0.625rem;
+}
+
+// ------------- Medium devices (tablets, 768px and up) -----------------
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-page-wrapper {
+		grid-template-rows: $tsd-medium-device-header-height 1fr auto;
+	}
+
+	// ------------- Header -----------------
+	.tsd-page-header-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		text-align: left;
+		padding: $tsd-medium-device-page-header-top-bottom-padding $tsd-small-device-page-left-right-padding;
+	}
+	
+	.tsd-page-header-logo-image {
+		width: $tsd-medium-device-page-header-logo-image-width;
+		height: $tsd-medium-device-page-header-logo-image-height;
+	}
+	
+	.tsd-page-header-navigation {
+		display: block;
+		text-align: left;
+	}
+
+	.tsd-page-header-navigation ul li {
+		display: inline;
+	}
+	
+	.tsd-page-header-navigation ul li {
+		padding-right: 1.4em;
+	}
+	.tsd-page-header-navigation ul li:last-child {
+		padding-right: 0em;
+	}
+	
+	.tsd-page-header-menu-toggler {
+		display: none;
+	}
+	
+	// ------------- Footer -----------------
+	.tsd-page-footer-wrapper {
+		grid-template-columns: 1fr minmax(600px, 1fr) 1fr;
+		grid-template-areas:
+			". fw .";
+	}
+	
+	.tsd-page-footer-contact {
+		grid-template-columns: minmax(300px, 1fr) 1fr;
+		grid-column-gap: 1rem;
+		grid-template-areas:
+			"fci fcc";
+	}
+}
+
+// ------------- Large devices (desktops, 992px and up) -----------------
+@media (min-width: $device-width-breakpoint-large) {
+	.tsd-page-wrapper {
+		grid-template-rows: $tsd-large-device-header-height 1fr auto;
+	}
+	
+	// ------------- Header -----------------
+	.tsd-page-header-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height: $tsd-large-device-page-header-logo-image-height;
+	}
+	
+	.tsd-page-header-logo-image {
+		width: $tsd-large-device-page-header-logo-image-width;
+		height: $tsd-large-device-page-header-logo-image-height;
+	}
+	
+	// ------------- Footer -----------------
+	.tsd-page-footer-wrapper {
+		grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
+	}
+	
+	.tsd-page-footer-contact {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 2rem;
+	}
+}
+
+// ------------- Extra large devices (large desktops, 1200px and up) -----------------
+@media (min-width: $device-width-breakpoint-xlarge) {
+	// ------------- Content -----------------
+	.tsd-page-content-header-inner {
+		max-width: 1140px;
+	}
+	
+	.tsd-page-content-width {
+		min-width: 1140px;
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	// ------------- Footer -----------------
+	.tsd-page-footer-wrapper {
+		grid-template-columns: 1fr minmax(800px, 1fr) 1fr;
+	}
+}

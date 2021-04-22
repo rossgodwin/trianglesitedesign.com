@@ -3,5 +3,4 @@ layout: leadership-bio
 title: &title "Leadership - Brent Purdum"
 ---
 
-{% assign person = site.data.leadership.brent %}
-{% include snippets/leadership/leadership-bio.html photo-url=person.photo-url name=person.name name_title=person.name_title accomplishments=person.accomplishments linkedin=person.linkedin.url email=person.email bio=person.bio %}
+{% include snippets/leadership/leadership-bio.html person = site.data.leadership.brent %}

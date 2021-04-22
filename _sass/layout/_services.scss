@@ -1,0 +1,91 @@
+.tsd-services {
+	@extend .tsd-page-content;
+}
+
+.tsd-services-header {
+	@extend .tsd-page-content-header;
+}
+
+.tsd-services-content {
+	@extend .tsd-page-content-main;
+}
+
+.tsd-services-content-section {
+	@extend .tsd-page-content-width;
+	display: grid;
+	grid-row-gap: 3px;
+}
+
+.tsd-services-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 2rem;
+	align-items: top;
+}
+
+.tsd-services-more-services-toolbar {
+	margin-bottom: 15px;
+	@extend .tsd-horizontal-align-center;
+}
+
+.tsd-services-service {
+	border-bottom: 3px solid $tsd-color-red;
+	&.tsd-services-service-open {
+		border-bottom: 0;
+	}
+}
+
+.tsd-services-service-clickable {
+	@extend .tsd-services-service;
+}
+
+.tsd-services-service-title {
+}
+
+.tsd-services-service-title:before {
+	float: right;
+}
+
+.tsd-services-service-title-clickable {
+	@extend .tsd-services-service-title;
+	cursor: pointer;
+}
+
+.tsd-services-service-toggle-icon:before {
+	@extend .tsd-fontawesome-icon;
+	margin-left: 20px;
+	content: "\f078"; // circle plus icon
+	&.tsd-services-service-toggle-icon-open {
+		content: "\f077"; // circle minus icon
+	}
+}
+
+.tsd-services-service-description {
+	display: none;
+	padding-bottom: 15px;
+	&.tsd-services-service-description-open {
+		display: grid;
+		//-webkit-transition: all 5s ease 5s;
+		//transition: all 5s ease 5s;
+	}
+}
+
+// ------------- Medium devices (tablets, 768px and up) -----------------
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 2rem;
+	}
+	
+	.tsd-services-additional-services-toolbar {
+		text-align: left;
+		margin-right: auto;
+	}
+}
+
+// ------------- Large devices (desktops, 992px and up) -----------------
+@media (min-width: $device-width-breakpoint-large) {
+	.tsd-services-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

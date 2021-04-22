@@ -1,13 +1,10 @@
-{% assign person = site.data.references.people[site.data.references.reference_index_leehumphrey] %}
-{% capture _slogan %}
-	{{ person.name }} - {{ person.title }} | {{ person.company }}
+{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_leehumphrey] %}
+{% capture _content %}
+	{% include snippets/components/page-wide-quote.html quote=_quote %}
 {% endcapture %}
-{% capture _description %}
-	"{{ person.quote }}"
-{% endcapture %}
+
 {% include page-content-header.html
-	style_class="tsd-leadership-header"
+	style_class="tsd-markets-header"
 	aos_animation_class="fade-down-right"
-	title="Leadership"
-	slogan=_slogan
-	description=_description %}
+	title="Markets"
+	content=_content %}

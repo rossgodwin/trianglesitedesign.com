@@ -33,5 +33,10 @@ $tsd-large-device-page-header-logo-image-width: 288px;
 $tsd-large-device-page-header-logo-image-height: 128px;
 $tsd-large-device-header-height: $tsd-large-device-page-header-logo-image-height + (2 * $tsd-medium-device-page-header-top-bottom-padding);
 
+$device-width-breakpoint-small: 576px;
+$device-width-breakpoint-medium: 768px;
+$device-width-breakpoint-large: 992px;
+$device-width-breakpoint-xlarge: 1200px;
+
 //@debug "Large device header height: #{$tsd-large-device-header-height}";
 //@debug "Large device logo image height: #{$tsd-large-device-page-header-logo-image-height}";

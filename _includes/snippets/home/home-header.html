@@ -1,16 +1,16 @@
 {% capture _title %}
 	{{ site.tsd.name }}
 {% endcapture %}
-{% capture _slogan %}
-	Civil Consulting and Engineering Firm
+{% capture _content %}
+	<h4>Civil Consulting and Engineering Firm</h4>
+	<p>
+		A seasoned civil consulting and engineering firm that specializes in
+		land planning and land development design.
+	</p>
 {% endcapture %}
-{% capture _description %}
-	A seasoned civil consulting and engineering firm that specializes in
-	land planning and land development design.
-{% endcapture %}
+
 {% include page-content-header.html
 	style_class="tsd-home-header"
 	aos_animation_class="fade-up"
 	title=_title
-	slogan=_slogan
-	description=_description %}
+	content=_content %}

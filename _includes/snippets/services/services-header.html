@@ -1,6 +1,12 @@
+{% capture _content %}
+	<h4>Almost 100% of Our Business</h4>
+	<p>
+		Comes from repeat clients and referrals.
+	</p>
+{% endcapture %}
+
 {% include page-content-header.html
 	aos_animation_class="fade-down-left"
 	style_class="tsd-services-header"
 	title="Services"
-	slogan="Almost 100% of Our Business"
-	description="Comes from repeat clients and referrals." %}
+	content=_content %}

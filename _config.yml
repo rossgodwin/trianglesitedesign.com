@@ -32,8 +32,8 @@ tsd:
 
 request_proposal_email:
   to: rlowder@trianglesitedesign.com;mlowder@trianglesitedesign.com
-  subject: Request for Proposal
-  body: Please reach to me.
+  subject: Request for Proposal from Triangle Site Design
+  body: Hi my name is ,<br>I would like to speak with you about some of the services you offer.<br>Please reply to this email or I can be reached at .
 
 # Jekyll configuration
 version: v1.2.0
@@ -60,9 +60,8 @@ exclude:
 
 excerpt_separator: <!--more-->
 
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :compressed
 
 # Use the following plug-ins
 gems:
