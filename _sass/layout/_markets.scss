@@ -1,0 +1,17 @@
+.tsd-markets {
+	@extend .tsd-page-content;
+}
+
+.tsd-markets-header {
+	@extend .tsd-page-content-header;
+}
+
+.tsd-markets-content {
+	@extend .tsd-page-content-main;
+}
+
+.tsd-markets-content-section {
+	@extend .tsd-page-content-width;
+	display: grid;
+	grid-row-gap: 3px;
+}
