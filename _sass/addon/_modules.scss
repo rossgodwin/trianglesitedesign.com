@@ -20,3 +20,14 @@
 		}
 	}
 }
+
+// ------------- Large devices (desktops, 992px and up) -----------------
+@media (min-width: $device-width-breakpoint-large) {
+	.image-left-drop-shadow {
+		box-shadow: -20px 20px 0px 0px $tsd-color-drop-shadow;
+	}
+	
+	.image-right-drop-shadow {
+		box-shadow: 20px -20px 0px 0px $tsd-color-drop-shadow;
+	}
+}

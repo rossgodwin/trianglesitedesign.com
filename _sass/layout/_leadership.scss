@@ -125,65 +125,22 @@
 	@extend .tsd-horizontal-align-center;
 }
 
-// https://codepen.io/epogeedesign/pen/NWqoXRo
-.tsd-leadership-experience-metric {
-	.tsd-leadership-experience-metric-graphic {
-		position:relative;
+.leadership-progress-bar {
+	@extend .tsd-horizontal-align-center;
+	
+	span {
+		text-transform: uppercase;
+		color: $tsd-color-gray;
+	}
+	
+	.progress-bar {
 		margin-top: 1em;
 		margin-bottom: 1em;
+		@extend .tsd-horizontal-align-center;
 		
-		.tsd-leadership-experience-metric-graphic-value {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		span {
 			font-size: 2.5em;
 			font-weight: bold;
-			//font-family: $tsd-font-courierNew;
-		}
-	}
-
-	.tsd-leadership-experience-metric-label {
-		text-transform: uppercase;
-		text-align: center;
-	}
-}
-
-.tsd-leadership-experience-metric-graphic-svg {
-	display: block;
-	margin: auto;
-	width: 226px;
-	height: 226px;
-	
-	circle {
-		transform: rotate(-90deg);
-		transform-origin: 50% 50%;
-		stroke-dasharray: 628.32, 628.32;
-		stroke-width: 10;
-		fill: transparent;
-		r: 100;
-		cx: 113;
-		cy: 113;
-
-		&.fill {
-			stroke: #D3D3D3;
-		}
-
-		&.progress {
-			stroke: $tsd-color-red;
-			transition: stroke-dashoffset 0.35s;
-			stroke-dashoffset: 214.16;
-			-webkit-animation: NAME-YOUR-ANIMATION 1.5s forwards;
-			-webkit-animation-timing-function: linear;
-
-			@-webkit-keyframes NAME-YOUR-ANIMATION {
-				0% { stroke-dashoffset: 628.32; }
-				100%   { stroke-dashoffset: 157.08; }
-			}
 		}
 	}
 }

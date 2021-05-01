@@ -1,9 +1,10 @@
-<script src="{{ 'assets/jquery-3.1.1/js/jquery.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/jquery-3.1.1/js/jquery.min.js' | relative_url }}"></script>
 
-<script src="{{ 'assets/aos-3.0.0-beta.6/js/aos.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/lib/aos-3.0.0-beta.6/js/aos.min.js' | relative_url }}"></script>
 <script>
 	AOS.init({
-		duration: 1000
+		duration: 1000,
+		once: true
 	});
 </script>
 
@@ -76,17 +77,13 @@
 			$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
 			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
 		});
-
-		$('.tsd-leadership-experience-metric-counter').each(function () {
-		    $(this).prop('Counter',0).animate({
-		        Counter: $(this).text()
-		    }, {
-		        duration: 1500,
-		        easing: 'linear',
-		        step: function (now) {
-		            $(this).text(Math.ceil(now));
-		        }
-		    });
+		
+		document.addEventListener('aos:in:leadership-progress-bar-id', ({ detail }) => {
+			$(".progress-bar").loading();
 		});
 	});
 </script>
+
+{% for script in layout.body-footer-scripts %}
+    <script src="{{ script | relative_url }}"></script>
+{% endfor %}

@@ -3,9 +3,13 @@ layout: page
 title: &title "Projects"
 ---
 
-{% assign projects = site.data.projects.projects %}
-{% assign project_count = projects.size %}
-{% assign column_one_count = project_count | modulo: 2 | plus: project_count | divided_by: 2 %}
+{% assign group_size = 4 %}
+
+{% assign g1_projects = site.data.projects.projects | slice: 0, group_size %}
+{% assign g1_projects_c1_count = g1_projects.size | modulo: 2 | plus: g1_projects.size | divided_by: 2 %}
+
+{% assign g2_projects = site.data.projects.projects | slice: group_size, group_size %}
+{% assign g2_projects_c1_count = g2_projects.size | modulo: 2 | plus: g2_projects.size | divided_by: 2 %}
 
 <div class="tsd-projects">
 	{% include snippets/projects/projects-header.html %}
@@ -14,23 +18,49 @@ title: &title "Projects"
 		<section class="tsd-projects-content-section">
 			<div class="tsd-projects-grid">
 				<div class="tsd-projects-grid-column">
-					{% for project in projects limit:column_one_count %}
-						{% include snippets/projects/project-summary.html
-							location=project.location
-							project_name=project.name
-							photo_url=project.primary-photo-url
-							description=project.description
-						%}
+					{% for _project in g1_projects limit:g1_projects_c1_count %}
+						{% include snippets/projects/project-one-photo-panel.html project=_project %}
 					{% endfor %}
 				</div>
 				<div class="tsd-projects-grid-column">
-					{% for project in projects offset:column_one_count %}
-						{% include snippets/projects/project-summary.html
-							location=project.location
-							project_name=project.name
-							photo_url=project.primary-photo-url
-							description=project.description
-						%}
+					{% for _project in g1_projects offset:g1_projects_c1_count %}
+						{% include snippets/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		
+		{% capture _content %}
+			<div class="test4">
+				<img class="tsd-image-responsive image-left-drop-shadow"
+					src="/assets/images/projects/Starbucks/starbucks-IMG_5551-1.jpg"
+					srcset="/assets/images/projects/Starbucks/starbucks-IMG_5551-1.jpg 794w,/assets/images/projects/Starbucks/starbucks-IMG_5551-1-480x643.jpg 480w"
+					size="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 794px, 100vw"
+					style="max-width: 480px;">
+				<div class="tsd-horizontal-align-center">
+					<div class="tsd-project-summary-heading">
+						<h3>North & South Carolina</h3>
+						<h1>Starbucks</h1>
+					</div>
+					<p style="margin-bottom: 25px;">We partner with developers for Starbucks Corporation and assist this American coffee company chain with expanding its 28,218+ worldwide locations (as of 2017) into new areas of NC and SC. Our current projects include stand-alone and strip mall locations and address the complexities of design around drive-thrus, parking accommodations, and outdoor seating.</p>
+					<img class="tsd-image-responsive image-right-drop-shadow"
+						src="/assets/images/projects/Starbucks/starbucks-IMG_2078.jpg"
+						style="max-width: 440px;">
+				</div>
+			</div>
+		{% endcapture %}
+		{% include snippets/projects/project-angled-edges.html content=_content %}
+		
+		<section class="tsd-projects-content-section">
+			<div class="tsd-projects-grid">
+				<div class="tsd-projects-grid-column">
+					{% for _project in g2_projects limit:g2_projects_c1_count %}
+						{% include snippets/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+				<div class="tsd-projects-grid-column">
+					{% for _project in g2_projects offset:g2_projects_c1_count %}
+						{% include snippets/projects/project-one-photo-panel.html project=_project %}
 					{% endfor %}
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: leadership
 title: &title "Leadership"
 ---
 
@@ -10,7 +10,7 @@ title: &title "Leadership"
 		<section class="tsd-leadership-content-section">
 			<div class="tsd-leadership-marketing-grid">
 				{% capture _description %}
-					With our 75+ years of combined service, the team at {{ site.tsd.name }} has managed a variety
+					With our 75+ years of combined service, the team at {{ site.data.tsd.name }} has managed a variety
 					of projects across North Carolina, South Carolina, and Virginia.
 				{% endcapture %}
 				
@@ -19,7 +19,15 @@ title: &title "Leadership"
 					quality="The Numbers Don't Lie"
 					description=_description %}
 				
-				{% include snippets/leadership/leadership-experience-metric.html %}
+				<div data-aos="zoom-in" data-aos-id="leadership-progress-bar-id" data-aos-duration="2000" class="leadership-progress-bar">
+					<span>
+						Over
+					</span>
+					<div class="progress-bar" data-percent="80" data-duration="2000"></div>
+					<span>
+						Years of combined experience
+					</span>
+				</div>
 			</div>
 		</section>
 		

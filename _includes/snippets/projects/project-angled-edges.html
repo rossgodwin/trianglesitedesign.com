@@ -1,0 +1,6 @@
+{% assign _reverse = include.reverse | default: false %}
+<div class="{% if _reverse == true %}project-angled-edges-reverse{% else %}project-angled-edges{% endif %}">
+	<section class="tsd-page-content-width">
+		{{ include.content }}
+	</section>
+</div>

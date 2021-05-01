@@ -10,10 +10,10 @@
 						<i class="fa fa-map-marker-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
 					<div>
-						<a href="{{ site.tsd.address-url }}" target="_blank">
-							{{ site.tsd.address.line1 }}
+						<a href="{{ site.data.tsd.address-url }}" target="_blank">
+							{{ site.data.tsd.address.line1 }}
 							<br>
-							{{ site.tsd.address.citystate }}, {{ site.tsd.address.zip }}
+							{{ site.data.tsd.address.citystate }}, {{ site.data.tsd.address.zip }}
 						</a>
 					</div>
 					
@@ -22,8 +22,8 @@
 						<i class="fa fa-mobile-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
 					<div>
-						<a href="tel:{{ site.tsd.phone_number }}">
-							{{ site.tsd.phone_number }}
+						<a href="tel:{{ site.data.tsd.phone_number }}">
+							{{ site.data.tsd.phone_number }}
 						</a>
 					</div>
 					
@@ -43,9 +43,9 @@
 						<i class="fa fa-clock fa-stack-1x fa-inverse" aria-hidden="true"></i>
 					</span>
 					<div class="tsd-page-footer-contact-hours">
-						{{ site.tsd.open.days }}
+						{{ site.data.tsd.open.days }}
 						<br>
-						{{ site.tsd.open.hours }}
+						{{ site.data.tsd.open.hours }}
 					</div>
 				</div>
 				
@@ -57,12 +57,18 @@
 				</div>
 			</div>
 			
-			<div class="tsd-page-footer-legal">
-				&copy; <span id="year"></span> - {{ site.tsd.name }}
-				<br>
-				Civil Consulting & Engineering Firm
-				<br>
-				{{ site.tsd.address.citystate }}
+			<div class="page-footer-legal">
+				<ul>
+					<li>
+						&copy; <span id="year"></span> - {{ site.data.tsd.name }}
+					</li>
+					<li>
+						{{ site.data.tsd.specialty }}
+					</li>
+					<li>
+						{{ site.data.tsd.address.citystate }}
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

@@ -6,34 +6,9 @@ baseurl: ""
 locale: en
 title: Civil Engineering Services, Raleigh NC | Triangle Site Design
 description: A civil consulting and engineering firm that specializes in land planning and land development design in North Carolina, South Carolina and Virginia.
-location: Raleigh, NC
 
 # Analytics
 google_analytics_measurement_id:
-
-tsd:
-  name: Triangle Site Design
-  legal_name: Triangle Site Design, PLLC
-  name_abbreviation: TSD
-  address:
-    line1: 4004 Barrett Drive, Suite 101
-    citystate: Raleigh, NC
-    zip: 27609
-  address-url: https://goo.gl/maps/B6HC9R6WakWR4yd99
-  phone_number: 919-553-6570
-  open:
-    days: Monday - Friday
-    hours: 8am - 5pm
-  linkedin:
-    url: https://www.linkedin.com/company/trianglesitedesign
-  facebook:
-    display-url: https://www.facebook.com/trianglesitedesign
-    url: https://www.facebook.com/trianglesitedesign
-
-request_proposal_email:
-  to: rlowder@trianglesitedesign.com;mlowder@trianglesitedesign.com
-  subject: Request for Proposal from Triangle Site Design
-  body: Hi my name is ,<br>I would like to speak with you about some of the services you offer.<br>Please reply to this email or I can be reached at .
 
 # Jekyll configuration
 version: v1.2.0
