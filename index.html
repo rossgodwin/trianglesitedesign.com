@@ -9,25 +9,16 @@ title: &title "Home"
 	<section class="tsd-home-content">
 		<section class="tsd-home-content-section">
 			<div class="tsd-home-marketing-text-photo">
-				<div class="tsd-home-marketing-text">
-					{% capture _description %}
-						Located in Raleigh, North Carolina, we partner with developers and retailers to deliver superior customer service with high-quality results. We reduce your project cost and time through Value Engineering; we identify and minimize unnecessary cost while improving the value of your desired results.
-					{% endcapture %}
-					{% include snippets/marketing-panel.html
-						slogan="Don't Settle for Less"
-						quality="Superior Customer Service"
-						positive="Total Client Satisfaction"
-						description=_description %}
+				<div>
+					{% include snippets/components/request-proposal.html %}
+					
+					<div class="tsd-home-marketing-text">
+						{% include snippets/home/home-partnering-benefit-panel.html benefit=site.data.layout.home.benefit1 %}
+					</div>
 				</div>
 				
 				<div class="tsd-home-marketing-photo-right">
-					<img src="{% link assets/images/dollar-genneral-800x680.jpg %}" alt="Dollar General - Manteo, NC"/>
-					<div class="tsd-home-marketing-photo-caption">
-						<h4>Dollar General | Manteo, NC</h4>
-						<p>
-							{{ site.data.tsd.name_abbreviation }} has designed over 170 Dollar General stores as of January 2019, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. {{ site.data.tsd.name_abbreviation }} knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
-						</p>
-					</div>
+					{% include snippets/home/home-photo-caption-panel.html project=site.data.layout.home.benefit1.project %}
 				</div>
 			</div>
 		</section>
@@ -38,24 +29,11 @@ title: &title "Home"
 		<section class="tsd-home-content-section">
 			<div class="tsd-home-marketing-photo-text">
 				<div class="tsd-home-marketing-text">
-					{% capture _description %}
-						At {{ site.data.tsd.name }}, building relationships is just as important as building sites. You will never be just another job. Services start with gaining an extensive understanding of your situation and needs. We commit to connecting with you personally on every project to create a relationship that leads to a superior product and unsurpassed results.
-					{% endcapture %}
-					{% include snippets/marketing-panel.html
-						slogan="Done The Right Way"
-						quality="Strong Partnership"
-						positive="Customer Involvement And Communication"
-						description=_description %}
+					{% include snippets/home/home-partnering-benefit-panel.html benefit=site.data.layout.home.benefit2 %}
 				</div>
 				
 				<div class="tsd-home-marketing-photo-left">
-					<img src="{% link assets/images/projects/wakefield_commons_apartments.jpg %}" alt="Wakefield Commons Apartments - Raleigh, NC"/>
-					<div class="tsd-home-marketing-photo-caption">
-						<h4>Wakefield Commons | Raleigh, NC</h4>
-						<p>
-							This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC).  Given the project is located in a watershed, many stormwater and grading challenges surfaced that {{ site.data.tsd.name_abbreviation }} had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
-						</p>
-					</div>
+					{% include snippets/home/home-photo-caption-panel.html project=site.data.layout.home.benefit2.project %}
 				</div>
 			</div>
 		</section>
@@ -66,24 +44,11 @@ title: &title "Home"
 		<section class="tsd-home-content-section">
 			<div class="tsd-home-marketing-text-photo">
 				<div class="tsd-home-marketing-text">
-					{% capture _description %}
-						{{ site.data.tsd.name }} is unique in that we have the capabilities of a large firm and the agility of a small firm. With 75+ years of combined service, we have managed a variety of projects across North Carolina, South Carolina, and Virginia.
-					{% endcapture %}
-					{% include snippets/marketing-panel.html
-						slogan="Just What You Need"
-						quality="High-Quality Product"
-						positive="Wide Range of Civil Engineering Design Services on Time and Within Budget"
-						description=_description %}
+					{% include snippets/home/home-partnering-benefit-panel.html benefit=site.data.layout.home.benefit3 %}
 				</div>
 				
 				<div class="tsd-home-marketing-photo-right">
-					<img src="{% link assets/images/panera-800x1035.jpg %}" alt="Panera Bread - Durham, NC"/>
-					<div class="tsd-home-marketing-photo-caption">
-						<h4>Panera Bread | Durham, NC</h4>
-						<p>
-							Partnering with a developer for Panera Bread Company, {{ site.data.tsd.name_abbreviation }} has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
-						</p>
-					</div>
+					{% include snippets/home/home-photo-caption-panel.html project=site.data.layout.home.benefit3.project %}
 				</div>
 			</div>
 		</section>
@@ -95,25 +60,18 @@ title: &title "Home"
 			<div class="tsd-cardlist-grid">
 				<div class="tsd-cardlist-card-wrapper">
 					<div data-aos="fade-up" class="tsd-cardlist-card">
-						<h2>Why Choose {{ site.data.tsd.name }}</h2>
+						<h2>{{ site.data.layout.home.partner_with_us.question }}</h2>
 						<p>
-							The benefits of partnering with {{ site.data.tsd.name }}
+							{{ site.data.layout.home.partner_with_us.title }}
 						</p>
 					</div>
 				</div>
 				<div class="tsd-cardlist-list-wrapper">
 					<div data-aos="fade-down" class="tsd-cardlist-list">
 						<ul>
-							<li>Value Engineering</li>
-							<li>Premium value placed on your schedule</li>
-							<li>Emphasis on efficient, cost-effective design</li>
-							<li>Superior and personalized customer service</li>
-							<li>Timely, cost-efficient and excellent work</li>
-							<li>Valuable management, technical, and regulatory knowledge and experience</li>
-							<li>Expertise and professional service with emphasis on high quality</li>
-							<li>Attention to detail</li>
-							<li>Responsiveness to client inquiries</li>
-							<li>Honesty and integrity</li>
+							{% for benefit in site.data.layout.home.partner_with_us.benefits %}
+								<li>{{ benefit }}</li>
+							{% endfor %}
 						</ul>
 					</div>
 				</div>

@@ -25,13 +25,17 @@
 	}
 }
 
+.text-box-drop-shadow {
+	box-shadow: 0px 15px 80px -6px #00000033;
+}
+
 // ------------- Large devices (desktops, 992px and up) -----------------
 @media (min-width: $device-width-breakpoint-large) {
 	.image-left-drop-shadow {
-		box-shadow: -20px 20px 0px 0px $tsd-color-drop-shadow;
+		box-shadow: -20px 20px 0px 0px #0c0c0c21;
 	}
 	
 	.image-right-drop-shadow {
-		box-shadow: 20px -20px 0px 0px $tsd-color-drop-shadow;
+		box-shadow: 20px -20px 0px 0px #0c0c0c21;
 	}
 }
