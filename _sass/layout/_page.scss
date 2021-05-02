@@ -9,6 +9,10 @@
 		"h"
 		"c"
 		"f";
+	
+	.page-header-social-icons {
+		display: none;
+	}
 }
 
 // ------------- Header -----------------
@@ -81,6 +85,10 @@
 				}
 			}
 		}
+	}
+	
+	.page-header-social-icons {
+		display: block;
 	}
 }
 
@@ -236,6 +244,15 @@
 @media (min-width: $device-width-breakpoint-medium) {
 	.tsd-page-wrapper {
 		grid-template-rows: $tsd-medium-device-header-height 1fr auto;
+		
+		.page-header-social-icons {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: auto;
+			right: 0;
+			padding: inherit;
+		}
 	}
 
 	// ------------- Header -----------------
@@ -260,6 +277,10 @@
 	.tsd-page-header-navigation {
 		display: block;
 		text-align: left;
+		
+		.page-header-social-icons {
+			display: none;
+		}
 	}
 
 	.tsd-page-header-navigation ul li {
