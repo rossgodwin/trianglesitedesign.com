@@ -16,7 +16,7 @@
 	grid-area: h;
 	z-index: 10;
 	font-size: 1rem;
-	border-bottom: 1px solid #ccc;
+	border-bottom: $page-header-border-height solid $page-header-border-color;
 }
 
 .tsd-page-header-wrapper {
@@ -30,11 +30,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	height: $tsd-small-device-page-header-logo-image-height;
 }
 
 .tsd-page-header-logo-image {
 	width: $tsd-small-device-page-header-logo-image-width;
-	height: $tsd-small-device-page-header-logo-image-height;
+	height: inherit;
 }
 
 .tsd-page-header-menu-toggler {
@@ -238,12 +239,15 @@
 	}
 
 	// ------------- Header -----------------
-	.tsd-page-header-wrapper {
+	.tsd-page-header {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 1;
+		z-index: 10;
+	}
+	
+	.tsd-page-header-wrapper {
 		text-align: left;
 		padding: $tsd-medium-device-page-header-top-bottom-padding $tsd-small-device-page-left-right-padding;
 	}
@@ -312,12 +316,15 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+	}
+	
+	.tsd-page-header-title {
 		height: $tsd-large-device-page-header-logo-image-height;
 	}
 	
 	.tsd-page-header-logo-image {
 		width: $tsd-large-device-page-header-logo-image-width;
-		height: $tsd-large-device-page-header-logo-image-height;
+		height: inherit;
 	}
 	
 	// ------------- Footer -----------------

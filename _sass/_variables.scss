@@ -16,6 +16,9 @@ $tsd-button-border-width: 2px;
 
 $tsd-page-content-large-header-height: 289px;
 
+$page-header-border-color: #ccc;
+$page-header-border-height: 1px;
+
 $tsd-small-device-page-header-top-bottom-padding: 5px;
 $tsd-small-device-page-footer-top-bottom-padding: 1rem;
 $tsd-small-device-page-left-right-padding: 1rem;
@@ -32,12 +35,13 @@ $tsd-medium-device-header-height: $tsd-medium-device-page-header-wrapper-height 
 
 $tsd-large-device-page-header-logo-image-width: 288px;
 $tsd-large-device-page-header-logo-image-height: 128px;
-$tsd-large-device-header-height: $tsd-large-device-page-header-logo-image-height + (2 * $tsd-medium-device-page-header-top-bottom-padding);
+$tsd-large-device-header-height: $tsd-large-device-page-header-logo-image-height + (2 * $tsd-medium-device-page-header-top-bottom-padding) + $page-header-border-height;
 
 $device-width-breakpoint-small: 576px;
 $device-width-breakpoint-medium: 768px;
 $device-width-breakpoint-large: 992px;
 $device-width-breakpoint-xlarge: 1200px;
 
+//@debug "Small device header height: #{$tsd-small-device-header-height}";
 //@debug "Large device header height: #{$tsd-large-device-header-height}";
 //@debug "Large device logo image height: #{$tsd-large-device-page-header-logo-image-height}";
