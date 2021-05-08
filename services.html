@@ -4,13 +4,12 @@ title: &title "Services"
 ---
 
 <div class="tsd-services">
-	{% include snippets/services/services-header.html %}
+	{% include snippets/layout/services/services-header.html %}
 	
 	<section class="tsd-services-content">
 		<section class="tsd-services-content-section">
 			<div class="tsd-services-grid">
 				{% for service in site.data.services.services limit:3 %}
-					<!-- <div class="tsd-services-primary-service-item{{ forloop.index }}">-->
 					{% case forloop.index %}
 					{% when 1 %}
 						<div data-aos="fade-right">
@@ -19,7 +18,7 @@ title: &title "Services"
 					{% when 3 %}
 						<div data-aos="fade-left">
 					{% endcase %}
-							{% include snippets/services/service-item.html
+							{% include snippets/layout/services/service-item.html
 								toggle_open=service.toggle_open
 								title=service.title
 								benefit=service.benefit
@@ -28,8 +27,8 @@ title: &title "Services"
 				{% endfor %}
 			</div>
 			
-			<div class="tsd-horizontal-align-center">
-				<a class="tsd-button-primary tsd-button-icon-right" href="#more-services" role="button">See More Services<i class="fas fa-chevron-down"></i></a>
+			<div class="services-more-services-button-wrapper">
+				<a class="services-more-services-button" href="#more-services" role="button">See More Services<i class="fas fa-chevron-down"></i></a>
 			</div>
 		</section>
 		
@@ -37,12 +36,12 @@ title: &title "Services"
 		{% include snippets/components/quote-angled-edges.html quote=_quote %}
 		
 		<section id="more-services" class="tsd-services-content-section tsd-element-scroll-snap">
-			<div class="tsd-services-more-services-toolbar">
+			<div class="services-expand-services-button-wrapper">
 				<a id="tsd-services-more-services-toggle-button" class="tsd-button-primary" data-text-swap="Collapse All" role="button">Expand All</a>
 			</div>
 			<div class="tsd-services-grid">
 				{% for service in site.data.services.services offset:3 %}
-					{% include snippets/services/service-item.html
+					{% include snippets/layout/services/service-item.html
 						toggle_open=service.toggle_open
 						title=service.title
 						benefit=service.benefit

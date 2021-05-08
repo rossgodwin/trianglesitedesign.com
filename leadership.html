@@ -4,13 +4,13 @@ title: &title "Leadership"
 ---
 
 <div class="tsd-leadership">
-	{% include snippets/leadership/leadership-header.html %}
+	{% include snippets/layout/leadership/leadership-header.html %}
 	
 	<section class="tsd-leadership-content">
 		<section class="tsd-leadership-content-section">
 			<div class="tsd-leadership-marketing-grid">
 				{% capture _description %}
-					With our 75+ years of combined service, the team at {{ site.data.tsd.name }} has managed a variety
+					With our 85+ years of combined service, the team at {{ site.data.tsd.name }} has managed a variety
 					of projects across North Carolina, South Carolina, and Virginia.
 				{% endcapture %}
 				
@@ -23,7 +23,7 @@ title: &title "Leadership"
 					<span>
 						Over
 					</span>
-					<div class="progress-bar" data-percent="80" data-duration="2000"></div>
+					<div class="progress-bar" data-percent="85" data-duration="2000"></div>
 					<span>
 						Years of combined experience
 					</span>
@@ -31,19 +31,19 @@ title: &title "Leadership"
 			</div>
 		</section>
 		
-		<section class="tsd-leadership-content-section">
+		<section class="tsd-page-content-width">
 			<div class="tsd-leadership-team-grid">
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.matt %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.matt %}
 				
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.brent %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.brent %}
 				
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.carlo %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.carlo %}
 				
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.ross %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.ross %}
 				
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.toni %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.toni %}
 				
-				{% include snippets/leadership/leadership-preview.html person=site.data.leadership.rinnette %}
+				{% include snippets/layout/leadership/leadership-preview.html person=site.data.leadership.rinnette %}
 			</div>
 		</section>
 	</section>

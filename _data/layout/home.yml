@@ -6,7 +6,7 @@ benefit1:
   project:
     name: Dollar General
     location: Manteo, NC
-    primary-photo-url: assets/images/projects/DG/dollar-genneral-800x680.jpg
+    primary-photo-url: assets/images/projects/dollar-genneral-800x680.jpg
     description: TSD has designed over 213 Dollar General stores as of April 2021, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. TSD knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
 
 benefit2:
@@ -17,7 +17,7 @@ benefit2:
   project:
     name: Wakefield Commons
     location: Raleigh, NC
-    primary-photo-url: assets/images/projects/WakefieldCommons/wakefield_commons_apartments.jpg
+    primary-photo-url: assets/images/projects/wakefield_commons_apartments.jpg
     description: This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC). Given the project is located in a watershed, many stormwater and grading challenges surfaced that TSD had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
 
 benefit3:
@@ -28,7 +28,7 @@ benefit3:
   project:
     name: Panera Bread
     location: Durham, NC
-    primary-photo-url: assets/images/panera-800x1035.jpg
+    primary-photo-url: assets/images/projects/panera-800x1035.jpg
     description: Partnering with a developer for Panera Bread Company, TSD has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
 
 partner_with_us:

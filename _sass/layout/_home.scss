@@ -12,8 +12,6 @@
 
 .tsd-home-content-section {
 	@extend .tsd-page-content-width;
-	display: grid;
-	grid-row-gap: 3px;
 }
 
 .tsd-home-marketing {
@@ -36,6 +34,8 @@
 		@extend .tsd-horizontal-align-center;
 		margin-bottom: 2em;
 	}
+	
+	
 }
 
 .tsd-home-marketing-photo-text {
@@ -77,7 +77,6 @@
 	font-size: 0.813rem;
 }
 
-// ------------- Large devices (desktops, 992px and up) -----------------
 @media (min-width: $device-width-breakpoint-large) {
 	$tsd-large-device-home-marketing-photo-max-width: 475px;
 	
