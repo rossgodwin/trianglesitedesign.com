@@ -11,8 +11,11 @@ $site-baseurl: '{{ site.baseurl }}';
 	"lib/fontawesome-free-5.15.3-web/brands.scss",
 	
 	"variables",
+	
+	"mixins/align",
 	"mixins/angled_edges",
 	"mixins/opacity",
+	
 	"addon/commons",
 	"addon/modules",
 	

@@ -34,8 +34,6 @@
 		@extend .tsd-horizontal-align-center;
 		margin-bottom: 2em;
 	}
-	
-	
 }
 
 .tsd-home-marketing-photo-text {
@@ -112,5 +110,15 @@
 	
 	.tsd-home-marketing-photo-caption {
 		max-width: 80%;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	// ------------- Content -----------------
+	.tsd-home {
+		.tsd-page-content-width {
+			min-width: 1140px;
+			max-width: 1140px;
+		}
 	}
 }
