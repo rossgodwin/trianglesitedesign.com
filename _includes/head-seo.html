@@ -1,21 +1,47 @@
-{% assign _url = page.url | relative_url | prepend: site.url | replace:'index.html','' %} 
+{% include helpers/get-page-url.html %}
+<link rel="canonical" href="{{ __return }}">
 
-{% include helpers/get-page-title.html page=page %}
-{% assign _title = site.title %}
-{% if __return %}
-	{% assign _title = __return | prepend: ' - ' | prepend: site.title %}
+{% assign _title = site.data.seo.title %}
+{% if page.title %}
+	{% assign _title = page.title %}
+{% elsif layout.title %}
+	{% assign _title = layout.title %}
+{% endif %}
+{% if _title %}
+	{% if page.title-concat %}
+		{% assign _title = page.title-concat | prepend: _title %}
+	{% endif %}
+	<title>{{ _title }}</title>
 {% endif %}
 
-{% include helpers/get-page-description.html page=page %}
-{% assign _description = __return %}
+{% assign _keywords = site.data.seo.keywords %}
+{% if page.tags %}
+	{% assign _keywords = page.tags %}
+{% elsif layout.tags %}
+	{% assign _keywords = layout.tags %}
+{% endif %}
+{% if _keywords %}
+	<meta name="keywords" content="{{ _keywords | join: ', ' }}" />
+{% endif %}
 
-<link rel="canonical" href="{{ _url }}">
+{% assign _description = site.data.seo.description %}
+{% if page.description %}
+	{% assign _description = page.description %}
+{% elsif page.excerpt %}
+	{% assign _description = page.excerpt | strip_html %}
+{% elsif layout.description %}
+	{% assign _description = layout.description %}
+{% endif %}
+{% if _description %}
+	<meta name="description" content="{{ _description }}" />
+{% endif %}
 
-<title>{{ _title }}</title>
-<meta name="description" content="{{ _description }}" />
-
-<meta property="og:title" content="{{ _title }}" />
-<meta property="og:description" content="{{ _description }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ _url }}" />
-<meta property="og:site_name" content="{{ site.data.tsd.name }}" />
+{% assign _author = site.data.seo.author %}
+{% if page.author %}
+	{% assign _author = page.author %}
+{% elsif layout.author %}
+	{% assign _author = layout.author %}
+{% endif %}
+{% if _author %}
+	<meta name="author" content="{{ _author }}" />
+{% endif %}
