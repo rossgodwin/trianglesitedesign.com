@@ -70,7 +70,9 @@ $tsd-page-header-social-icons-width: 90px;
 	}
 	
 	ul {
-		@extend .tsd-unordered-list-no-bullets;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
 		
 		li {
 			display: vertical;
@@ -142,7 +144,7 @@ $tsd-page-header-social-icons-width: 90px;
 		@extend .tsd-page-content-header-inner;
 	}
 	
-	.quote {
+	.tsd-quote {
 		h5 {
 			color: $color-white;
 		}
@@ -182,7 +184,7 @@ $tsd-page-header-social-icons-width: 90px;
 .tsd-page-footer-content {
 	background-color: $color-white;
 	
-	.tsd-request-proposal {
+	.tsd-request-proposal-panel {
 		text-align: center;
 		border-bottom: 5px solid $tsd-color-red;
 	}

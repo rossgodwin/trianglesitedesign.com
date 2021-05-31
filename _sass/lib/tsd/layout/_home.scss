@@ -27,13 +27,6 @@
 
 .tsd-home-marketing-text-photo {
 	@extend .tsd-home-marketing;
-	
-	.tsd-request-proposal {
-		@extend .text-box-drop-shadow;
-		background-color: $color-white;
-		@extend .tsd-horizontal-align-center;
-		margin-bottom: 2em;
-	}
 }
 
 .tsd-home-marketing-photo-text {
@@ -67,7 +60,7 @@
 .tsd-home-marketing-photo-caption {
 	position: relative;
 	margin-top: -30px;
-	@extend .text-box-drop-shadow;
+	box-shadow: 0px 15px 80px -6px #00000033;
 	background-color: $color-white;
 	@extend .tsd-horizontal-align-center;
 	max-width: 80%;

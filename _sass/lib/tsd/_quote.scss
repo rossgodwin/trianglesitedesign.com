@@ -1,0 +1,36 @@
+.tsd-quote {
+	p {
+		margin-bottom: 10px;
+		
+		i {
+			margin-right: 10px;
+		}
+	}
+	
+	h5 {
+		font-weight: bold;
+	}
+}
+
+.tsd-quote-angled-edges {
+	@include angle(both);
+	background: $tsd-color-gray;
+	@extend .tsd-horizontal-align-center;
+	margin: 60px 0;
+	padding: 4% 10px;
+	
+	p {
+		color: $color-white;
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+	
+	h4, h5 {
+		color: $tsd-color-dark-gray;
+	}
+}
+
+.tsd-quote-angled-edges-reverse {
+	@extend .tsd-quote-angled-edges;
+	@include angle(both, true);
+}

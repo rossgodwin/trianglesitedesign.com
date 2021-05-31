@@ -1,0 +1,135 @@
+.tsd-button {
+	display: inline-block;
+	font-family: $tsd-font-helveticaSaira;
+	font-size: 1.250rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	padding: .375rem 1rem;
+	text-align: center;
+	vertical-align: middle;
+	border: $tsd-button-border-width solid transparent;
+	border-radius: 0.25rem;
+	text-decoration: none;
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.tsd-button-icon-right {
+	i {
+		margin-left: 10px;
+	}
+}
+
+.tsd-button-primary {
+	@extend .tsd-button;
+	background: $tsd-color-red;
+	color: $color-white;
+	border-color: transparent;
+	padding: .3em 1em;
+	line-height: 1.7em;
+	font-weight: 600;
+	&:hover {
+		background: $color-white;
+		border-color: $tsd-color-red;
+		color: $tsd-color-red;
+	}
+}
+
+.tsd-button-primary-pressed {
+	background: $color-white;
+	border-color: $tsd-color-red;
+	color: $tsd-color-red;
+}
+
+.tsd-button-scroll_to_top {
+	transition: all .25s ease-in-out;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: inline-flex;
+	z-index: 100;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 100px 0;
+	border-radius: 10px 0 0 10px;
+	padding: .25em;
+	width: 40px;
+	height: 40px;
+	border-style: solid;
+	border-width: $tsd-button-border-width 0 $tsd-button-border-width $tsd-button-border-width;
+	border-color: $tsd-color-red;
+	background: $tsd-color-red;
+	color: $color-white;
+	line-height: 1.7em;
+	font-weight: 600;
+	
+	&:hover {
+		background: $color-white;
+		color: $tsd-color-red;
+	}
+	
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+  
+	&.hide {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.tsd-button-scroll_to_top-screen-reader-text {
+	position: absolute;
+	clip-path: inset(50%);
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	word-wrap: normal !important;
+	clip: rect(1px, 1px, 1px, 1px);
+
+	&:focus {
+		display: block;
+		top: 5px;
+		left: 5px;
+		z-index: 100000; // Above WP toolbar
+		clip-path: none;
+		background-color: #eee;
+		padding: 15px 23px 14px;
+		width: auto;
+		height: auto;
+		text-decoration: none;
+		line-height: normal;
+		color: #444;
+		font-size: 1em;
+		clip: auto !important;
+	}
+}
+
+.tsd-button-left-icon {
+	i {
+		margin-right: 0.5rem;
+	}
+}
+
+.linkedin-icon-button, .facebook-icon-button {
+	span {
+		color: $tsd-color-red;
+		
+		&:hover {
+			color: $color-white;
+			i.fa-inverse {
+				color: $tsd-color-red;
+			}
+		}
+	}
+}

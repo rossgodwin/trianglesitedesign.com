@@ -8,15 +8,7 @@ layout: leadership
 	<section class="tsd-leadership-content">
 		<section class="tsd-leadership-content-section">
 			<div class="tsd-leadership-marketing-grid">
-				{% capture _description %}
-					With our 85+ years of combined service, the team at {{ site.data.tsd.name }} has managed a variety
-					of projects across North Carolina, South Carolina, and Virginia.
-				{% endcapture %}
-				
-				{% include snippets/marketing-panel.html
-					slogan="Proven Success"
-					quality="The Numbers Don't Lie"
-					description=_description %}
+				{% include snippets/layout/leadership/leadership-partner-with-us-benefit-panel.html benefit=site.data.leadership.partner-with-us-benefit %}
 				
 				<div data-aos="zoom-in" data-aos-id="leadership-progress-bar-id" data-aos-duration="2000" class="leadership-progress-bar">
 					<span>

@@ -60,7 +60,7 @@
 }
 
 .tsd-services-service-toggle-icon:before {
-	@extend .tsd-fontawesome-icon;
+	font-family: $tsd-font-fontAwesome;
 	margin-left: 20px;
 	content: "\f078"; // circle plus icon
 	&.tsd-services-service-toggle-icon-open {

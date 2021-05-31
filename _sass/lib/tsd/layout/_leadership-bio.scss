@@ -9,16 +9,6 @@
 
 .tsd-leadership-bio-content-section {
 	@extend .tsd-page-content-width;
-	
-	.tsd-bullet-point {
-		i {
-			margin-right: 5px;
-		}
-		
-		span {
-			color: $tsd-color-red;
-		}
-	}
 }
 
 .tsd-leadership-bio-profile {
