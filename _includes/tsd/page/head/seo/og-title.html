@@ -1,0 +1,13 @@
+{% assign _og-title = site.data.seo.og-title %}
+{% if page.og-title %}
+	{% assign _og-title = page.og-title %}
+{% elsif layout.og-title %}
+	{% assign _og-title = layout.og-title %}
+{% elsif page.title %}
+	{% assign _og-title = page.title %}
+{% elsif layout.title %}
+	{% assign _og-title = layout.title %}
+{% endif %}
+{% if _og-title %}
+	<meta name="og:title" content="{{ _og-title }}" />
+{% endif %}

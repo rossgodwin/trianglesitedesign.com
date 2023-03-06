@@ -1,0 +1,47 @@
+benefit1:
+  slogan: Don't Settle for Less
+  quality: Superior Customer Service
+  positive: Total Client Satisfaction
+  description: Located in Raleigh, North Carolina, we partner with developers and retailers to deliver superior customer service with high-quality results. We reduce your project cost and time through Value Engineering; we identify and minimize unnecessary cost while improving the value of your desired results.
+  project:
+    name: Dollar General
+    location: Lizard Lick, NC
+    primary-photo-url: assets/images/page/home/dollar-general-lizard-lick-nc.jpg
+    description: TSD has designed over 213 Dollar General stores as of April 2021, reaching from one side of North Carolina to the other. The key to success has been maintaining a customer focus. TSD knows Vanguard Property Group's needs and applies a reliable standard that works at any location, while meeting municipal and local requirements.
+
+benefit2:
+  slogan: Done the Right Way
+  quality: Strong Partnership
+  positive: Customer Involvement and Communication
+  description: At Triangle Site Design, building relationships is just as important as building sites. You will never be just another job. Services start with gaining an extensive understanding of your situation and needs. We commit to connecting with you personally on every project to create a relationship that leads to a superior product and unsurpassed results.
+  project:
+    name: Wakefield Commons
+    location: Raleigh, NC
+    primary-photo-url: assets/images/page/home/wakefield-commons-raleigh-nc.jpg
+    description: This 80 unit apartment development is conveniently located in upscale North Raleigh in the heart of vibrant Wakefield and offers Section 42 Low-Income Housing Tax Credit (LIHTC). Given the project is located in a watershed, many stormwater and grading challenges surfaced that TSD had to design around all the while ensuring the project naturally blended into the existing environment of restaurants, shopping, services, and entertainment.
+
+benefit3:
+  slogan: Just What You Need
+  quality: High-Quality Product
+  positive: Wide Range of Civil Engineering Design Services on Time and Within Budget
+  description: Triangle Site Design is unique in that we have the capabilities of a large firm and the agility of a small firm. With 85+ years of combined service, we have managed a variety of projects across North Carolina, South Carolina, and Virginia.
+  project:
+    name: Panera Bread
+    location: Durham, NC
+    primary-photo-url: assets/images/page/home/panera-bread-durham-nc.jpg
+    description: Partnering with a developer for Panera Bread Company, TSD has helped expand their 2,000+ (as of 2017) store locations into Durham, NC. This challenging project included design on an outparcel within an existing office park by adding the store, a drive-thru, an outdoor patio area, and an internal walkway plan within the business park.
+
+partner_with_us:
+  question: Why Choose Triangle Site Design
+  title: The Benefits of Partnering With Us
+  benefits:
+    - Value Engineering
+    - Premium value placed on your schedule
+    - Emphasis on efficient, cost-effective design
+    - Superior and personalized customer service
+    - Timely, cost-efficient and excellent work
+    - Valuable management, technical, and regulatory knowledge and experience
+    - Expertise and professional service with emphasis on high quality
+    - Attention to detail
+    - Responsiveness to client inquiries
+    - Honesty and integrity

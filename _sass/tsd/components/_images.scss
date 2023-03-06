@@ -1,0 +1,14 @@
+.tsd-image-responsive {
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-image-left-drop-shadow {
+		box-shadow: -20px 20px 0px 0px #0c0c0c21;
+	}
+	
+	.tsd-image-right-drop-shadow {
+		box-shadow: 20px -20px 0px 0px #0c0c0c21;
+	}
+}

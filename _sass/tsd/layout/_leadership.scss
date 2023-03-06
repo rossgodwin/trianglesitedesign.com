@@ -1,0 +1,107 @@
+.tsd-leadership {
+	@extend .tsd-page-content;
+}
+
+.tsd-leadership-header {
+	@extend .tsd-page-content-header;
+	@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-small.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tsd-leadership-content {
+	@extend .tsd-page-content-main;
+}
+
+.tsd-leadership-content-section {
+	@extend .tsd-page-content-width;
+}
+
+.tsd-leadership-marketing-grid {
+	display: grid;
+	grid-row-gap: 2rem;
+	margin-bottom: 60px;
+}
+
+.leadership-progress-bar {
+	@extend .tsd-horizontal-align-center;
+	
+	span {
+		text-transform: uppercase;
+		color: $tsd-color-gray;
+	}
+	
+	.progress-bar {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		@extend .tsd-horizontal-align-center;
+		
+		span {
+			font-size: 2.5em;
+			font-weight: bold;
+		}
+	}
+}
+
+.tsd-leadership-team-grid {
+	display: grid;
+	grid-row-gap: 2rem;
+}
+
+.tsd-leadership-profile-preview {
+	@extend .tsd-horizontal-align-center;
+	border: 1px solid $tsd-color-light-gray;
+	box-shadow: 0px 0px 4px 2px #d6d9dc;
+	padding: 30px;
+	
+	img {
+		border-radius: 7px;
+		margin-bottom: 10px;
+	}
+	
+	hr {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 10px;
+		border: 0px;
+		border-top: 3px solid $tsd-color-red;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-small) {
+	.tsd-leadership-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-medium.jpg');
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-leadership-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-large.jpg');
+	}
+	
+	.tsd-leadership-marketing-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 2rem;
+	}
+	
+	.tsd-leadership-team-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 2rem;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.tsd-leadership-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-xlarge.jpg');
+	}
+	
+	.tsd-leadership-team-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.tsd-leadership-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-xxlarge.jpg');
+	}
+}

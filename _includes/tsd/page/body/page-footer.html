@@ -1,0 +1,75 @@
+<footer id="contact" class="tsd-page-footer">
+	<div class="tsd-page-footer-wrapper">
+		<div data-aos="fade-up" class="tsd-page-footer-content">
+			{% include tsd/components/request-proposal-panel.html %}
+			
+			<div class="tsd-page-footer-contact">
+				<div data-aos="zoom-in" class="tsd-page-footer-contact-info">
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-map-marker-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						<a href="{{ site.data.tsd.address-url }}" target="_blank">
+							{{ site.data.tsd.address.line1 }}
+							<br>
+							{{ site.data.tsd.address.citystate }}, {{ site.data.tsd.address.zip }}
+						</a>
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-mobile-alt fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						<a href="tel:{{ site.data.tsd.phone_number }}">
+							{{ site.data.tsd.phone_number }}
+						</a>
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fas fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div>
+						{% assign person = site.data.leadership.rinnette %}
+						<a href="mailto:{{ person.email }}" target="_blank">
+							{{ person.email }}
+						</a>
+					</div>
+					
+					<span class="fa-stack fa-2x">
+						<i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+						<i class="fa fa-clock fa-stack-1x fa-inverse" aria-hidden="true"></i>
+					</span>
+					<div class="tsd-page-footer-contact-hours">
+						{{ site.data.tsd.open.days }}
+						<br>
+						{{ site.data.tsd.open.hours }}
+					</div>
+				</div>
+				
+				<div class="tsd-page-footer-contact-connect">
+					<div>Connect With Us</div>
+					{% include tsd/components/buttons/linkedin-icon-button.html fa_size_class="fa-2x" %}
+					
+					{% include tsd/components/buttons/facebook-icon-button.html fa_size_class="fa-2x" %}
+				</div>
+			</div>
+			
+			<div class="page-footer-legal">
+				<ul>
+					<li>
+						&copy; <span id="year"></span> - {{ site.data.tsd.name }}
+					</li>
+					<li>
+						{{ site.data.tsd.specialty }}
+					</li>
+					<li>
+						{{ site.data.tsd.address.citystate }}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

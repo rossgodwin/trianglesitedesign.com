@@ -1,0 +1,80 @@
+---
+layout: page
+---
+
+<div class="tsd-home">
+	{% include tsd/layout/home/home-header.html %}
+	
+	<section class="tsd-home-content">
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-text-photo">
+				<div class="tsd-home-marketing-text">
+					{% include tsd/layout/home/home-partner-with-us-benefit-panel.html benefit=site.data.layout.home.benefit1 %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-right">
+					{% include tsd/layout/home/home-photo-caption-panel.html project=site.data.layout.home.benefit1.project %}
+				</div>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_georgebarnes] %}
+		{% include tsd/components/quote-angled-edges.html quote=_quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-photo-text">
+				<div class="tsd-home-marketing-text">
+					{% include tsd/layout/home/home-partner-with-us-benefit-panel.html benefit=site.data.layout.home.benefit2 %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-left">
+					{% include tsd/layout/home/home-photo-caption-panel.html project=site.data.layout.home.benefit2.project %}
+				</div>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_adamsellner] %}
+		{% include tsd/components/quote-angled-edges.html reverse=true quote=_quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-home-marketing-text-photo">
+				<div class="tsd-home-marketing-text">
+					{% include tsd/layout/home/home-partner-with-us-benefit-panel.html benefit=site.data.layout.home.benefit3 %}
+				</div>
+				
+				<div class="tsd-home-marketing-photo-right">
+					{% include tsd/layout/home/home-photo-caption-panel.html project=site.data.layout.home.benefit3.project %}
+				</div>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_leehumphrey] %}
+		{% include tsd/components/quote-angled-edges.html quote=_quote %}
+		
+		<section class="tsd-home-content-section">
+			<div class="tsd-cardlist-grid">
+				<div data-aos="fade-up" class="tsd-cardlist-card-wrapper">
+					<div class="tsd-cardlist-card">
+						<h2>{{ site.data.layout.home.partner_with_us.question }}</h2>
+						<p>
+							{{ site.data.layout.home.partner_with_us.title }}
+						</p>
+					</div>
+					<img src="{{ 'assets/images/page/home/sherwin-williams-cary-nc.jpg' | relative_url }}" style="max-width: 100%;" />
+				</div>
+				<div class="tsd-cardlist-list-wrapper">
+					<div data-aos="fade-down" class="tsd-cardlist-list">
+						<ul>
+							{% for benefit in site.data.layout.home.partner_with_us.benefits %}
+								<li>{{ benefit }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_paulwilliams] %}
+		{% include tsd/components/quote-angled-edges.html reverse=true quote=_quote %}
+	</section>
+</div>

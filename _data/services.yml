@@ -1,0 +1,54 @@
+services:
+  - title: Site Selection & Design
+    benefit: Avoid Unnecessary Upfront Cost
+    description: TSD partners closely with you to outline project criteria and identify any challenges to development. We will prevent you from spending unnecessary money and provide experience in all facets of development such as commercial, residential and industrial.
+    toggle_open: yes
+  - title: Conceptual Site Planning
+    benefit: Test Fit
+    description: During this project phase we develop a test fit for the site and show how your product works on the property. We provide you with thorough research of key project facets to maximize space and increase the value of your development.
+    toggle_open: yes
+  - title: Due Diligence / Evaluation Reports
+    benefit: Identify Potential Obstacles
+    description: This predevelopment stage of your land development project includes researching state and local codes; determining rezoning, access, floodplain or environmental issues; and addressing any potential obstacles to the project. TSD saves you money by helping you make the best financial investment based on permitting costs, impact fees and government regulations.
+    toggle_open: yes
+  - title: Feasibility Studies
+    benefit: In-Depth Study
+    description: This in-depth study details regulatory requirements for the project, including meetings with government agencies to review requirements and concept plans. It also outlines all state and local codes, rezoning, access, floodplain, and environmental issues; and any other potential project obstacles. TSD helps you understand what you are getting into and whether the local economy can support the proposed development.
+    toggle_open: no
+  - title: Civil / Site Engineering
+    benefit: 85+ Years' Combined Experience
+    description: TSD offers over 85 years of combined experience providing research to maximize quality and permitting services. This project phase includes designing such things as site layout, grading, drainage, stormwater, landscaping, utilities and entitlement; and creating development standards that align with state and local jurisdictional codes.
+    toggle_open: no
+  - title: Land Planning / Master Planning
+    benefit: Provide Choices
+    description: TSD takes your piece of property and designs multiple development options within the overall master plan. We maximize use of the property and provide choices for the one large parcel, whether a mixture of residential and retail, or other combinations.
+    toggle_open: no
+  - title: Zoning/Re-zoning Assistance & Special Use
+    benefit: Key Players
+    description: TSD coordinates with state and local government to determine desirable zoning districts and then works with you to facilitate public and municipal meetings. We meet with key players of the jurisdiction to walk through the zoning or rezoning process.
+    toggle_open: no
+  - title: Hydrology
+    description: TSD performs hydrologic analysis of existing and developed sites, including existing flow analysis, post flow analysis and implementation of stormwater control measures to meet local and/or state requirements.
+    toggle_open: no
+  - title: Color Renderings
+    benefit: A Picture is Worth a Thousand Words
+    description: Our developers are often challenged with selling their vision to governmental agencies and residents being affected by their project. These color renderings help do that-they provide tangible evidence of the scope and quality of the project.
+    toggle_open: no
+  - title: ADA Compliance
+    description: We design sites to be compliant with current ADA regulations, for example, ADA paths from right-of-way and/or parking to the front of the building.
+    toggle_open: no
+  - title: Computer Program Proficiency
+    description: AutoCAD, Autoturn, Microsoft Project, StormCAD, Flowmaster, Hydroflow and HEC-RAS
+    toggle_open: no
+  - title: Site Planning & Layout
+  - title: Sediment & Erosion Control Design
+  - title: Grading & Drainage Design
+  - title: Stormwater Management Design
+  - title: Utility Services & Infrastructure
+  - title: Utility Studies
+  - title: Watershed Analysis & Modeling
+  - title: Entitlements / Permitting
+  - title: Drainage System Design
+  - title: FEMA & NPDES Permitting
+  - title: Construction Administration
+  - title: Environmental Analysis & Permitting

@@ -1,0 +1,41 @@
+---
+layout: leadership
+---
+
+<div class="tsd-leadership">
+	{% include tsd/layout/leadership/leadership-header.html %}
+	
+	<section class="tsd-leadership-content">
+		<section class="tsd-leadership-content-section">
+			<div class="tsd-leadership-marketing-grid">
+				{% include tsd/layout/leadership/leadership-partner-with-us-benefit-panel.html benefit=site.data.leadership.partner-with-us-benefit %}
+				
+				<div data-aos="zoom-in" data-aos-id="leadership-progress-bar-id" data-aos-duration="2000" class="leadership-progress-bar">
+					<span>
+						Over
+					</span>
+					<div class="progress-bar" data-percent="85" data-duration="2000"></div>
+					<span>
+						Years of combined experience
+					</span>
+				</div>
+			</div>
+		</section>
+		
+		<section class="tsd-page-content-width">
+			<div class="tsd-leadership-team-grid">
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.matt %}
+				
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.brent %}
+				
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.carlo %}
+				
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.ross %}
+				
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.toni %}
+				
+				{% include tsd/layout/leadership/leadership-preview.html person=site.data.leadership.rinnette %}
+			</div>
+		</section>
+	</section>
+</div>

@@ -1,0 +1,47 @@
+
+
+$tsd-font-helveticaPoppins: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+$tsd-font-georgiaPlayfair: 'Playfair Display',Georgia,"Times New Roman",serif;
+$tsd-font-helveticaSaira: 'Saira Extra Condensed',Helvetica,Arial,Lucida,sans-serif;
+$tsd-font-courierNew: 'Courier New', monospace;
+$tsd-font-fontAwesome: 'Font Awesome 5 Free';
+
+$tsd-button-border-width: 2px;
+
+$tsd-page-content-small-header-height: 250px;
+$tsd-page-content-medium-header-height: 300px;
+$tsd-page-content-large-header-height: 300px;
+$tsd-page-content-xlarge-header-height: 300px;
+
+$page-header-border-color: #ccc;
+$page-header-border-height: 1px;
+
+$tsd-small-device-page-header-top-bottom-padding: 5px;
+$tsd-small-device-page-footer-top-bottom-padding: 1rem;
+$tsd-small-device-page-left-right-padding: 1rem;
+$tsd-small-device-page-header-logo-image-width: 162px;
+$tsd-small-device-page-header-logo-image-height: 72px;
+$tsd-small-device-header-height: $tsd-small-device-page-header-logo-image-height + (2 * $tsd-small-device-page-header-top-bottom-padding);
+
+$tsd-medium-device-page-header-top-bottom-padding: 2 * $tsd-small-device-page-header-top-bottom-padding;
+$tsd-medium-device-page-header-logo-image-width: 162px;
+$tsd-medium-device-page-header-logo-image-height: 72px;
+$tsd-medium-device-page-header-navigation-height: 28px;
+$tsd-medium-device-page-header-wrapper-height: $tsd-medium-device-page-header-logo-image-height + $tsd-medium-device-page-header-navigation-height;
+$tsd-medium-device-header-height: $tsd-medium-device-page-header-wrapper-height + (2 * $tsd-medium-device-page-header-top-bottom-padding);
+
+$tsd-large-device-page-header-logo-image-width: 288px;
+$tsd-large-device-page-header-logo-image-height: 128px;
+$tsd-large-device-header-height: $tsd-large-device-page-header-logo-image-height + (2 * $tsd-medium-device-page-header-top-bottom-padding) + $page-header-border-height;
+
+$device-width-breakpoint-small: 576px;		// Small devices (landscape phones, 576px and up)
+$device-width-breakpoint-medium: 768px;		// Medium devices (tablets, 768px and up)
+$device-width-breakpoint-large: 992px;		// Large devices (desktops, 992px and up)
+$device-width-breakpoint-xlarge: 1200px;	// Extra large devices (large desktops, 1200px and up)
+$device-width-breakpoint-xxlarge: 1400px;	// Extra extra large devices (large desktops, 1400px and up)
+
+$large-device-content-max-width: 80%;
+
+//@debug "Small device header height: #{$tsd-small-device-header-height}";
+//@debug "Large device header height: #{$tsd-large-device-header-height}";
+//@debug "Large device logo image height: #{$tsd-large-device-page-header-logo-image-height}";

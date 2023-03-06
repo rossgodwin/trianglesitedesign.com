@@ -1,0 +1,63 @@
+# Site wide configuration
+destination: docs
+url: 'https://trianglesitedesign.com'
+baseurl: ''
+lang: en
+
+# Analytics
+google_analytics_measurement_id: ''
+
+# Jekyll configuration
+version: v1.2.0
+permalink: /:categories/:title/
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+include:
+  - _pages
+exclude:
+  - .bundle
+  - .jekyll-cache
+  - .gitignore
+  - .project
+  - _drafts
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - other/
+  - vendor/bundle/
+
+excerpt_separator: <!--more-->
+
+sass:
+  style: :compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+# Plugins
+gems:
+  - jekyll-feed
+  - jekyll-liquify
+
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: docs/*
+    values:
+      sitemap: false
+  - scope:
+      path: assets/*
+    values:
+      sitemap: false

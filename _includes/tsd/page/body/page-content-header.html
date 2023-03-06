@@ -1,0 +1,10 @@
+<header class="{{ include.style_class }}">
+	<section>
+		<div{% if include.aos_animation_class %} data-aos="{{ include.aos_animation_class }}"{% endif %}>
+			<h3>{{ include.title }}</h3>
+			<p>
+				{{ include.content }}
+			</p>
+		</div>
+	</section>
+</header>

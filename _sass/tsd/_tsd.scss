@@ -1,0 +1,31 @@
+// Uses 7-1 pattern - https://sass-guidelin.es/#architecture
+
+@import "abstracts/colors";
+@import "abstracts/variables";
+@import "abstracts/mixins/align";
+@import "abstracts/mixins/angled_edges";
+@import "abstracts/mixins/background-image";
+@import "abstracts/mixins/opacity";
+
+@import "vendors/normalize";
+@import "vendors/fontawesome-free-5.15.3-web/fontawesome.scss";
+@import "vendors/fontawesome-free-5.15.3-web/solid.scss";
+@import "vendors/fontawesome-free-5.15.3-web/brands.scss";
+
+@import "base/reset";
+
+@import "components/align";
+@import "components/buttons";
+@import "components/images";
+@import "components/panels";
+@import "components/quote";
+@import "components/scroll";
+
+@import "layout/page";
+@import "layout/home";
+@import "layout/leadership-bio";
+@import "layout/leadership";
+@import "layout/markets";
+@import "layout/projects";
+@import "layout/services";
+@import "layout/404";

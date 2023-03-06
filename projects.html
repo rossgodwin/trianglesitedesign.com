@@ -1,0 +1,69 @@
+---
+layout: page
+title: Civil Engineering Projects, Raleigh NC | Triangle Site Design
+description: The goal of all our civil engineering projects is to get you the most for your money, deal with the red tape, and more. Triangle Site Design has professional engineer licenses in North Carolina, South Carolina and Virginia. Contact us for a proposal.
+---
+
+{% assign group_size = 4 %}
+
+{% assign g1_projects = site.data.projects.projects | slice: 0, group_size %}
+{% assign g1_projects_c1_count = g1_projects.size | modulo: 2 | plus: g1_projects.size | divided_by: 2 %}
+
+{% assign g2_projects = site.data.projects.projects | slice: group_size, group_size %}
+{% assign g2_projects_c1_count = g2_projects.size | modulo: 2 | plus: g2_projects.size | divided_by: 2 %}
+
+<div class="tsd-projects">
+	{% include tsd/layout/projects/projects-header.html %}
+	
+	<section class="tsd-projects-content">
+		<section class="tsd-projects-content-section">
+			<div class="tsd-projects-grid">
+				<div class="tsd-projects-grid-column">
+					{% for _project in g1_projects limit:g1_projects_c1_count %}
+						{% include tsd/layout/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+				<div class="tsd-projects-grid-column">
+					{% for _project in g1_projects offset:g1_projects_c1_count %}
+						{% include tsd/layout/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		
+		{% capture _content %}
+			<div class="project-angled-edges-grid">
+				<img class="tsd-image-responsive tsd-image-left-drop-shadow"
+					src="{{ 'assets/images/page/projects/starbucks-IMG_5551-1.jpg' | relative_url }}">
+				<div class="tsd-horizontal-align-center">
+					<div class="tsd-project-summary-heading">
+						<h3>North & South Carolina</h3>
+						<h1>Starbucks</h1>
+					</div>
+					<p>We partner with developers for Starbucks Corporation and assist this American coffee company chain with expanding its 28,218+ worldwide locations (as of 2017) into new areas of NC and SC. Our current projects include stand-alone and strip mall locations and address the complexities of design around drive-thrus, parking accommodations, and outdoor seating.</p>
+					<img class="tsd-image-responsive tsd-image-right-drop-shadow"
+						src="{{ 'assets/images/page/projects/starbucks-IMG_2078.jpg' | relative_url }}">
+				</div>
+			</div>
+		{% endcapture %}
+		{% include tsd/layout/projects/project-angled-edges.html content=_content %}
+		
+		<section class="tsd-projects-content-section">
+			<div class="tsd-projects-grid">
+				<div class="tsd-projects-grid-column">
+					{% for _project in g2_projects limit:g2_projects_c1_count %}
+						{% include tsd/layout/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+				<div class="tsd-projects-grid-column">
+					{% for _project in g2_projects offset:g2_projects_c1_count %}
+						{% include tsd/layout/projects/project-one-photo-panel.html project=_project %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_mattlowder] %}
+		{% include tsd/components/quote-angled-edges.html quote=_quote %}
+	</section>
+</div>

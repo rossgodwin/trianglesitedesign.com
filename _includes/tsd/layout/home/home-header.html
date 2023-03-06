@@ -1,0 +1,16 @@
+{% capture _title %}
+	{{ site.data.tsd.name }}
+{% endcapture %}
+{% capture _content %}
+	<h4>{{ site.data.tsd.specialty }}</h4>
+	<p>
+		A seasoned civil consulting and engineering firm that specializes in
+		land planning and land development design.
+	</p>
+{% endcapture %}
+
+{% include tsd/page/body/page-content-header.html
+	style_class="tsd-home-header"
+	aos_animation_class="fade-up"
+	title=_title
+	content=_content %}

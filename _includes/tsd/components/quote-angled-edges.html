@@ -1,0 +1,4 @@
+{% assign _reverse = include.reverse | default: false %}
+<div class="{% if _reverse == true %}tsd-quote-angled-edges-reverse{% else %}tsd-quote-angled-edges{% endif %}">
+	{% include tsd/components/page-wide-quote.html quote=_quote %}
+</div>

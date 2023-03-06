@@ -1,0 +1,20 @@
+---
+layout: page
+title: Civil Engineering Leadership Team, Raleigh | Triangle Site Design
+description: Triangle Site Design is a civil consulting and engineering firm with professional engineers licensed in North Carolina, South Carolina and Virgina.
+---
+
+<div class="tsd-leadership-bio">
+	<section class="tsd-leadership-bio-content">
+		<section class="tsd-leadership-bio-content-section">
+			<p>
+				<a class="tsd-button-primary tsd-button-left-icon" href="{% link leadership.html %}" role="button"><i class="fas fa-angle-left"></i>Back to Leadership</a>
+			</p>
+			
+			{{ content }}
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_leehumphrey] %}
+		{% include tsd/components/quote-angled-edges.html quote=_quote %}
+	</section>
+</div>

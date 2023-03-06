@@ -1,0 +1,10 @@
+{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_mattlowder] %}
+{% capture _content %}
+	{% include tsd/components/page-wide-quote.html quote=_quote %}
+{% endcapture %}
+
+{% include tsd/page/body/page-content-header.html
+	style_class="tsd-markets-header"
+	aos_animation_class="fade-down-right"
+	title="Markets"
+	content=_content %}

@@ -1,0 +1,42 @@
+.tsd-markets {
+	@extend .tsd-page-content;
+}
+
+.tsd-markets-header {
+	@extend .tsd-page-content-header;
+	@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-small.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tsd-markets-content {
+	@extend .tsd-page-content-main;
+}
+
+.tsd-markets-content-section {
+	@extend .tsd-page-content-width;
+}
+
+@media (min-width: $device-width-breakpoint-small) {
+	.tsd-markets-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-medium.jpg');
+	}
+}
+
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-markets-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-large.jpg');
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.tsd-markets-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-xlarge.jpg');
+	}
+}
+
+@media (min-width: $device-width-breakpoint-xlarge) {
+	.tsd-markets-header {
+		@include background-image('#{$site-baseurl}/assets/images/page/home/tractor-supply-garner-nc/background-xxlarge.jpg');
+	}
+}

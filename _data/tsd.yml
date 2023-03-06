@@ -1,0 +1,23 @@
+name: Triangle Site Design
+legal_name: Triangle Site Design, PLLC
+name_abbreviation: TSD
+specialty: Civil Consulting and Engineering Firm
+address:
+  line1: 4004 Barrett Drive, Suite 101
+  citystate: Raleigh, NC
+  zip: 27609
+address-url: https://goo.gl/maps/B6HC9R6WakWR4yd99
+phone_number: 919-553-6570
+open:
+  days: Monday - Friday
+  hours: 8am - 5pm
+linkedin:
+  url: https://www.linkedin.com/company/trianglesitedesign
+facebook:
+  display-url: https://www.facebook.com/trianglesitedesign
+  url: https://www.facebook.com/trianglesitedesign
+
+request_proposal_email:
+  to: rlowder@trianglesitedesign.com;mlowder@trianglesitedesign.com
+  subject: Request for Proposal from Triangle Site Design
+  body: Hi my name is ,<br>I would like to speak with you about some of the services you offer.<br>Please reply to this email or I can be reached at .

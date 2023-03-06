@@ -1,0 +1,54 @@
+---
+layout: page
+title: Civil Engineering Services, Raleigh NC | Triangle Site Design
+description: Triangle Site Design partners closely with you to outline project criteria and identify any challenges to development with our civil engineering services. We have professional engineer licenses in North Carolina, South Carolina and Virginia.
+---
+
+<div class="tsd-services">
+	{% include tsd/layout/services/services-header.html %}
+	
+	<section class="tsd-services-content">
+		<section class="tsd-services-content-section">
+			<div class="tsd-services-grid">
+				{% for service in site.data.services.services limit:3 %}
+					{% case forloop.index %}
+					{% when 1 %}
+						<div data-aos="fade-right">
+					{% when 2 %}
+						<div data-aos="zoom-in">
+					{% when 3 %}
+						<div data-aos="fade-left">
+					{% endcase %}
+							{% include tsd/layout/services/service-item.html
+								toggle_open=service.toggle_open
+								title=service.title
+								benefit=service.benefit
+								description=service.description %}
+						</div>
+				{% endfor %}
+			</div>
+			
+			<div class="services-more-services-button-wrapper">
+				<a class="services-more-services-button" href="#more-services" role="button">See More Services<i class="fas fa-chevron-down"></i></a>
+			</div>
+		</section>
+		
+		{% assign _quote = site.data.quotes.people[site.data.quotes.quote_index_stevenpeedin] %}
+		{% include tsd/components/quote-angled-edges.html quote=_quote %}
+		
+		<section id="more-services" class="tsd-services-content-section tsd-element-scroll-snap">
+			<div class="services-expand-services-button-wrapper">
+				<a id="tsd-services-more-services-toggle-button" class="tsd-button-primary" data-text-swap="Collapse All" role="button">Expand All</a>
+			</div>
+			<div class="tsd-services-grid">
+				{% for service in site.data.services.services offset:3 %}
+					{% include tsd/layout/services/service-item.html
+						toggle_open=service.toggle_open
+						title=service.title
+						benefit=service.benefit
+						description=service.description %}
+				{% endfor %}
+			</div>
+		</section>
+	</section>
+</div>

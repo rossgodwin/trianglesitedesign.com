@@ -1,0 +1,6 @@
+# destination: ../test.trianglesitedesign.com/docs
+url: 'https://rossgodwin.github.io'
+baseurl: '/trianglesitedesign.com'
+
+# Analytics
+google_analytics_measurement_id: ''

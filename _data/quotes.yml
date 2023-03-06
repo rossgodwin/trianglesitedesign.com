@@ -1,0 +1,37 @@
+quote_index_adamsellner: 0
+quote_index_georgebarnes: 1
+quote_index_stevenpeedin: 2
+quote_index_paulwilliams: 3
+quote_index_leehumphrey: 4
+quote_index_danesambrick: 5
+quote_index_mattlowder: 6
+
+people:
+  - name: Adam Sellner
+    title: Project Manager
+    company: Primax Properties, LLC
+    quotation: TSD's ability to understand our clients and provide a high level of responsiveness has been invaluable.
+  - name: George T. Barnes
+    title: Member-Manager
+    company: Vanguard Property Group
+    quotation: We look to TSD as an extension of our own organization and it is truly a great partnership.
+  - name: Steven R. Peedin
+    title: President
+    company: Rufty-Peedin Commercial Design Builders
+    quotation: One of the many reasons I enjoy working with TSD is their attentiveness. They respond quickly and thoroughly, always with the client's best interest in mind.
+  - name: Paul Williams
+    title: Vice President
+    company: Gemcap Development
+    quotation: Having worked with TSD on a number of single and multi-tenant site development projects over the past few years, we've found them to be responsive, thorough, affordable and generally just really good to work with. We've enjoyed partnering with them and look forward to future endeavors together.
+  - name: Lee Humphrey
+    title: Senior Project Manager
+    company: Double D Engineering, PLLC
+    quotation: It's always been a pleasure working with TSD, they are extremely knowledgeable in the art of stormwater design and always prompt with our inquiries.
+  - name: Dane Sambrick
+    title: President
+    company: Sambrick Commercial Realty
+    quotation: TSD has the determination and perseverance to stay engaged with the client while maintaining the principal of honoring their word with respect to cost. Matt and his team have been not only integral to our company growth and success, but also a trusted resource over many years.
+  - name: Matt Lowder
+    title: Owner
+    company: Triangle Site Design
+    quotation: For us, building relationships is as important as building sites - you will never be just another job.

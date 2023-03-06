@@ -1,0 +1,77 @@
+.tsd-leadership-bio {
+	@extend .tsd-page-content;
+}
+
+.tsd-leadership-bio-content {
+	@extend .tsd-page-content-main;
+	margin-top: 20px;
+}
+
+.tsd-leadership-bio-content-section {
+	@extend .tsd-page-content-width;
+}
+
+.tsd-leadership-bio-profile {
+	margin-top: 10px;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 1rem;
+	margin-bottom: 1rem;
+	//background: $tsd-color-light-gray;
+	border: 1px solid rgba(0, 0, 0, 0.025);
+	padding: 1rem;
+	
+	hr {
+		width: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border: 0px;
+		border-top: 1px solid $tsd-color-red;
+	}
+	
+	a {
+		color: $tsd-color-gray;
+	}
+	
+	h5 {
+		padding: 0;
+	}
+	
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.4;
+		background-image: url('#{$site-baseurl}/assets/images/bg_poly-core-off-white.jpg');
+		background-repeat: no-repeat;
+		background-position: 75% 75%;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.tsd-leadership-bio-photo {
+	max-width: 370px;
+	min-width: 250px;
+	max-height: 400px;
+	margin-bottom: 1rem;
+	@extend .tsd-horizontal-align-center;
+}
+
+// ------------- Medium devices (tablets, 768px and up) -----------------
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-leadership-bio-profile {
+		grid-template-columns: 1fr 2fr;
+		grid-column-gap: 2rem;
+		padding: 2rem;
+	}
+	
+	.tsd-leadership-bio-photo {
+		margin-bottom: 0;
+	}
+}

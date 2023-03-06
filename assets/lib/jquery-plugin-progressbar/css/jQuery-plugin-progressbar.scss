@@ -1,0 +1,55 @@
+---
+---
+
+@import "tsd/abstracts/colors";
+
+$circle-size: 225px;
+$circle-line-size: 20px;
+$background-color: $tsd-color-light-gray; 
+$progress-color: $tsd-color-red;
+
+.progress-bar {
+	height: $circle-size;
+	width: $circle-size;
+	div {
+		position: absolute;
+		height: $circle-size;
+		width: $circle-size;
+		border-radius: 50%;
+			span {
+				position: absolute;
+				line-height: $circle-size - $circle-line-size;
+				height: $circle-size - $circle-line-size;
+				width: $circle-size - $circle-line-size;
+				left: $circle-line-size / 2;
+				top: $circle-line-size / 2;
+				text-align: center;
+				border-radius: 50%;
+				background-color: white;
+			}
+	}
+
+	.background {
+		background-color: $background-color;
+	}
+	.rotate {
+		clip: rect(0 ($circle-size / 2) $circle-size 0);
+		background-color: $progress-color;
+	}
+	.left {
+		clip: rect(0 ($circle-size / 2) $circle-size 0);
+		opacity: 1;
+		background-color: $background-color;
+	}
+	.right {
+		clip: rect(0 ($circle-size / 2) $circle-size 0);
+		transform: rotate(180deg);
+		opacity: 0;
+		background-color: $progress-color;
+	}
+}
+
+@keyframes toggle {
+	0%		{ opacity: 0; }
+	100%	{ opacity: 1; }
+}

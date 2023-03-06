@@ -1,0 +1,11 @@
+@media (min-width: $device-width-breakpoint-medium) {
+	.tsd-element-scroll-snap {
+		scroll-margin-top: $tsd-medium-device-header-height;
+	}
+}
+
+@media (min-width: $device-width-breakpoint-large) {
+	.tsd-element-scroll-snap {
+		scroll-margin-top: $tsd-large-device-header-height;
+	}
+}

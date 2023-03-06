@@ -1,0 +1,4 @@
+Sitemap: https://rossgodwin.github.io/trianglesitedesign.com/sitemap.xml
+
+User-agent: *
+Disallow: /

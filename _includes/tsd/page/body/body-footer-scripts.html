@@ -1,0 +1,89 @@
+<script src="{{ 'assets/lib/jquery-3.1.1/js/jquery.min.js' | relative_url }}"></script>
+
+<script src="{{ 'assets/lib/aos-3.0.0-beta.6/js/aos.min.js' | relative_url }}"></script>
+<script>
+	AOS.init({
+		duration: 1000,
+		once: true
+	});
+</script>
+
+<script>
+	function onScrollScrollToTopButtonRenderer() {
+		let y = window.scrollY - 400;
+		
+		if (y > 0) {
+			$(".tsd-button-scroll_to_top").removeClass("hide");
+			$(".tsd-button-scroll_to_top").addClass("show");
+		} else {
+			$(".tsd-button-scroll_to_top").removeClass("show");
+			$(".tsd-button-scroll_to_top").addClass("hide");
+		}
+	}
+	
+	$(document).ready(function() {
+		$(".tsd-page-header-menu-toggler").click(function(e) {
+			$(".tsd-page-header-navigation").toggleClass("active");
+		});
+
+		$("#year").html(new Date().getFullYear());
+
+		$(window).scroll(onScrollScrollToTopButtonRenderer);
+
+		$("#tsd-services-more-services-toggle-button").click(function(e) {
+			var el = $(this);
+			
+			if (el.text() == el.data("text-swap")) {
+				el.text(el.data("text-original"));
+			} else {
+				el.data("text-original", el.text());
+				el.text(el.data("text-swap"));
+			}
+			
+			if (!el.hasClass("tsd-button-primary-pressed")) {
+				el.addClass("tsd-button-primary-pressed");
+
+				$("#more-services .tsd-services-service-clickable").each(function() {
+					if (!$(this).hasClass("tsd-services-service-open")) {
+						$(this).addClass("tsd-services-service-open");
+						$(this).find(".tsd-services-service-toggle-icon").addClass("tsd-services-service-toggle-icon-open");
+						$(this).find(".tsd-services-service-description").addClass("tsd-services-service-description-open");
+					}
+				});
+			} else {
+				el.removeClass("tsd-button-primary-pressed");
+
+				$("#more-services .tsd-services-service-clickable").each(function() {
+					if ($(this).hasClass("tsd-services-service-open")) {
+						$(this).removeClass("tsd-services-service-open");
+						$(this).find(".tsd-services-service-toggle-icon").removeClass("tsd-services-service-toggle-icon-open");
+						$(this).find(".tsd-services-service-description").removeClass("tsd-services-service-description-open");
+					}
+				});
+			}
+		});
+		
+		$(".tsd-button-scroll_to_top").click(function(e) {
+			e.preventDefault();
+			window.scroll({
+				top: 0, 
+				left: 0, 
+				behavior: 'smooth'
+			});
+		});
+		
+		$(".tsd-services-service-clickable").click(function(e) {
+			$(this).toggleClass("tsd-services-service-open");
+			$(this).find(".tsd-services-service-toggle-icon").toggleClass("tsd-services-service-toggle-icon-open");
+			$(this).find(".tsd-services-service-description").toggleClass("tsd-services-service-description-open");
+		});
+		
+		document.addEventListener('aos:in:leadership-progress-bar-id', ({ detail }) => {
+			$(".progress-bar").loading();
+		});
+	});
+</script>
+
+{% for script in layout.body-footer-scripts %}
+    <script src="{{ script | relative_url }}"></script>
+{% endfor %}

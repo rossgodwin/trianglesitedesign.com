@@ -1,0 +1,45 @@
+<header class="tsd-page-header">
+	<div class="tsd-page-header-wrapper">
+		<div class="tsd-page-header-content">
+			<div class="tsd-page-header-title">
+				<a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">
+					<img class="tsd-page-header-logo-image" src="{% link assets/images/logo.png %}" alt="{{ site.data.tsd.name }}">
+				</a>
+				
+				<button class="tsd-page-header-menu-toggler" type="button" aria-label="Toggle navigation">
+					<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+				</button>
+			</div>
+			
+			<nav class="tsd-page-header-navigation">
+				<ul>
+					<li class="{% if page.url == '/' %}active{% endif %}">
+						<a class="{% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+					</li>
+					<li class="{% if page.url contains 'markets' %}active{% endif %}">
+						<a href="{{ 'markets' | relative_url }}">Markets</a>
+					</li>
+					<li class="{% if page.url contains 'services' %}active{% endif %}">
+						<a href="{{ 'services' | relative_url }}">Services</a>
+					</li>
+					<li class="{% if page.url contains 'projects' %}active{% endif %}">
+						<a href="{{ 'projects' | relative_url }}">Projects</a>
+					</li>
+					<li class="{% if page.url contains 'leadership' %}active{% endif %}">
+						<a href="{{ 'leadership' | relative_url }}">Leadership</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						{% include tsd/page/body/page-header-social-icons.html %}
+					</li>
+				</ul>
+			</nav>
+			
+			<div class="page-header-social-icons-wrapper">
+				{% include tsd/page/body/page-header-social-icons.html %}
+			</div>
+		</div>
+	</div>
+</header>

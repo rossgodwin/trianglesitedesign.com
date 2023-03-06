@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "jQuery-plugin-progressbar.css",
+	"sources": [
+		"jQuery-plugin-progressbar.scss",
+		"_sass/tsd/abstracts/_colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"tsd/abstracts/colors\";\n\n$circle-size: 225px;\n$circle-line-size: 20px;\n$background-color: $tsd-color-light-gray; \n$progress-color: $tsd-color-red;\n\n.progress-bar {\n\theight: $circle-size;\n\twidth: $circle-size;\n\tdiv {\n\t\tposition: absolute;\n\t\theight: $circle-size;\n\t\twidth: $circle-size;\n\t\tborder-radius: 50%;\n\t\t\tspan {\n\t\t\t\tposition: absolute;\n\t\t\t\tline-height: $circle-size - $circle-line-size;\n\t\t\t\theight: $circle-size - $circle-line-size;\n\t\t\t\twidth: $circle-size - $circle-line-size;\n\t\t\t\tleft: $circle-line-size / 2;\n\t\t\t\ttop: $circle-line-size / 2;\n\t\t\t\ttext-align: center;\n\t\t\t\tborder-radius: 50%;\n\t\t\t\tbackground-color: white;\n\t\t\t}\n\t}\n\n\t.background {\n\t\tbackground-color: $background-color;\n\t}\n\t.rotate {\n\t\tclip: rect(0 ($circle-size / 2) $circle-size 0);\n\t\tbackground-color: $progress-color;\n\t}\n\t.left {\n\t\tclip: rect(0 ($circle-size / 2) $circle-size 0);\n\t\topacity: 1;\n\t\tbackground-color: $background-color;\n\t}\n\t.right {\n\t\tclip: rect(0 ($circle-size / 2) $circle-size 0);\n\t\ttransform: rotate(180deg);\n\t\topacity: 0;\n\t\tbackground-color: $progress-color;\n\t}\n}\n\n@keyframes toggle {\n\t0%\t\t{ opacity: 0; }\n\t100%\t{ opacity: 1; }\n}",
+		"$color-black: #000;\r\n$color-white: #fff;\r\n\r\n$tsd-color-red: #e02b20;\r\n$tsd-color-gray: #666;\r\n$tsd-color-light-gray: #fafafa;\r\n$tsd-color-dark-gray: #333;"
+	],
+	"names": [],
+	"mappings": "AAOA,AAAA,aAAa,AAAC,CACb,MAAM,CANO,KAAK,CAOlB,KAAK,CAPQ,KAAK,CA4ClB,AAvCD,AAGC,aAHY,CAGZ,GAAG,AAAC,CACH,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAVM,KAAK,CAWjB,KAAK,CAXO,KAAK,CAYjB,aAAa,CAAE,GAAG,CAYlB,AAnBF,AAQG,aARU,CAGZ,GAAG,CAKD,IAAI,AAAC,CACJ,QAAQ,CAAE,QAAQ,CAClB,WAAW,CAAE,KAAgC,CAC7C,MAAM,CAAE,KAAgC,CACxC,KAAK,CAAE,KAAgC,CACvC,IAAI,CAAE,IAAqB,CAC3B,GAAG,CAAE,IAAqB,CAC1B,UAAU,CAAE,MAAM,CAClB,aAAa,CAAE,GAAG,CAClB,gBAAgB,CAAE,KAAK,CACvB,AAlBJ,AAqBC,aArBY,CAqBZ,WAAW,AAAC,CACX,gBAAgB,CCxBK,OAAO,CDyB5B,AAvBF,AAwBC,aAxBY,CAwBZ,OAAO,AAAC,CACP,IAAI,CAAE,uBAAyC,CAC/C,gBAAgB,CC9BF,OAAO,CD+BrB,AA3BF,AA4BC,aA5BY,CA4BZ,KAAK,AAAC,CACL,IAAI,CAAE,uBAAyC,CAC/C,OAAO,CAAE,CAAC,CACV,gBAAgB,CCjCK,OAAO,CDkC5B,AAhCF,AAiCC,aAjCY,CAiCZ,MAAM,AAAC,CACN,IAAI,CAAE,uBAAyC,CAC/C,SAAS,CAAE,cAAc,CACzB,OAAO,CAAE,CAAC,CACV,gBAAgB,CCzCF,OAAO,CD0CrB,AAGF,UAAU,CAAV,MAAU,CACT,EAAE,CAAI,OAAO,CAAE,CAAC,CAChB,IAAI,CAAG,OAAO,CAAE,CAAC"
+}

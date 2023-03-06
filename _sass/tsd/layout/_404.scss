@@ -1,0 +1,14 @@
+.tsd-404 {
+	@extend .tsd-page-content-width;
+	@extend .tsd-horizontal-align-center;
+	padding: 40px 0;
+	
+	h1 {
+		font-size: 4em;
+	}
+	
+	a {
+		color: $tsd-color-red;
+		border-bottom: 3px solid $tsd-color-red;
+	}
+}

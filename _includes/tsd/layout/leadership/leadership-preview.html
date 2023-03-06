@@ -1,0 +1,10 @@
+{% include tsd/helpers/prepend-baseurl.html path=include.person.photo-url %}
+<div class="tsd-leadership-profile-preview">
+	<img class="tsd-leadership-bio-photo tsd-image-responsive" src="{{ __return }}" alt="{{ include.person.name }}">
+	<h4>{{ include.person.name }}{% if include.person.name_title %}, {{ include.person.name_title }}{% endif %}</h4>
+	<h5>{{ include.person.title }}</h5>
+	<hr>
+	<p>
+		<a class="tsd-button-primary" href="{{ include.person.personal-page-url }}" role="button">Read Bio</a>
+	</p>
+</div>
